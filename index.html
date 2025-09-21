@@ -19,7 +19,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/main.css">
     
-    <!-- Added AOS animation library for smooth scroll animations -->
+    <!-- Added AOS animation library and custom full-width responsive styles -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- JSON-LD Schema -->
@@ -46,13 +46,315 @@
         }
     }
     </script>
+
+    <!-- Added comprehensive responsive styles for full-width layout -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .full-width-container {
+            width: 100%;
+            max-width: none;
+            padding: 0;
+        }
+
+        .content-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            width: 100%;
+            padding: 100px 0;
+        }
+
+        .section-alt {
+            background: #f8fafc;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .col-50 {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+
+        .content-wrapper {
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: #64748b;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #475569;
+        }
+
+        .feature-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #1e3a8a;
+            color: white;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.2);
+        }
+
+        .cta-button:hover {
+            background: #1e40af;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin: 60px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        /* Infinite scrolling flags carousel */
+        .flags-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            overflow: hidden;
+            padding: 80px 0;
+        }
+
+        .flags-carousel {
+            display: flex;
+            animation: scroll 30s linear infinite;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .flag-item {
+            flex-shrink: 0;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .flag-item:hover {
+            transform: scale(1.1);
+        }
+
+        .flag-item img {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            margin-bottom: 15px;
+        }
+
+        .flag-label {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: #1e3a8a;
+            box-shadow: 0 25px 50px rgba(30, 58, 138, 0.15);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: #f1f5f9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+        }
+
+        .service-description {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .section {
+                padding: 60px 0;
+            }
+
+            .row {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .content-container {
+                padding: 0 15px;
+            }
+
+            .image-container img {
+                height: 300px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .flags-carousel {
+                gap: 40px;
+            }
+
+            .flag-item img {
+                width: 60px;
+                height: 45px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <!-- Fixed logo with proper branding -->
                 <h2 style="color: white; margin: 0; font-size: 1.5rem;">Global Trade California</h2>
             </div>
             <ul class="nav-menu">
@@ -114,171 +416,288 @@
         </div>
     </section>
 
-    <!-- Added alternating content sections with animations -->
-    <!-- About Us Section - Left Image, Right Text -->
-    <section class="content-section" style="padding: 80px 0; background: #f8fafc;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Global Trading Excellence" class="img-fluid rounded shadow-lg">
+    <!-- Section 1: Company Excellence - Left Image, Right Content -->
+    <section class="section">
+        <div class="content-container">
+            <div class="row">
+                <div class="col-50" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Global Trading Excellence">
                     </div>
                 </div>
-                <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="content-wrapper" style="padding-left: 40px;">
-                        <h2 style="font-size: 2.5rem; font-weight: 700; color: #1e3a8a; margin-bottom: 20px;">15+ Years of Global Trading Excellence</h2>
-                        <p style="font-size: 1.1rem; line-height: 1.8; color: #64748b; margin-bottom: 30px;">
-                            Global Trade California has been at the forefront of international trading, connecting businesses across 45+ countries with premium products and reliable supply chain solutions. Our expertise spans construction materials, automotive trading, heavy equipment, agricultural commodities, and sustainable recycling.
+                <div class="col-50" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="content-wrapper">
+                        <h2 class="section-title">15+ Years of Global Trading Excellence</h2>
+                        <p class="section-subtitle">
+                            Global Trade California has been at the forefront of international trading, connecting businesses across 45+ countries with premium products and reliable supply chain solutions.
                         </p>
-                        <div class="features-list" style="margin-bottom: 30px;">
-                            <div class="feature-item" style="display: flex; align-items: center; margin-bottom: 15px;">
-                                <img src="https://cdn-icons-png.flaticon.com/24/3176/3176366.png" alt="Check" style="margin-right: 15px;">
-                                <span style="color: #475569;">ISO 9001:2015 Certified Quality Management</span>
-                            </div>
-                            <div class="feature-item" style="display: flex; align-items: center; margin-bottom: 15px;">
-                                <img src="https://cdn-icons-png.flaticon.com/24/3176/3176366.png" alt="Check" style="margin-right: 15px;">
-                                <span style="color: #475569;">Global Network of Verified Suppliers</span>
-                            </div>
-                            <div class="feature-item" style="display: flex; align-items: center; margin-bottom: 15px;">
-                                <img src="https://cdn-icons-png.flaticon.com/24/3176/3176366.png" alt="Check" style="margin-right: 15px;">
-                                <span style="color: #475569;">24/7 Customer Support & Project Tracking</span>
-                            </div>
-                        </div>
-                        <a href="about.html" class="cta-button" style="background: #1e3a8a; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-block; transition: all 0.3s ease;">Learn More About Us</a>
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <img src="https://cdn-icons-png.flaticon.com/24/3176/3176366.png" alt="Check" class="feature-icon">
+                                ISO 9001:2015 Certified Quality Management
+                            </li>
+                            <li class="feature-item">
+                                <img src="https://cdn-icons-png.flaticon.com/24/3176/3176366.png" alt="Check" class="feature-icon">
+                                Global Network of Verified Suppliers
+                            </li>
+                            <li class="feature-item">
+                                <img src="https://cdn-icons-png.flaticon.com/24/3176/3176366.png" alt="Check" class="feature-icon">
+                                24/7 Customer Support & Project Tracking
+                            </li>
+                            <li class="feature-item">
+                                <img src="https://cdn-icons-png.flaticon.com/24/3176/3176366.png" alt="Check" class="feature-icon">
+                                Competitive Pricing & Flexible Payment Terms
+                            </li>
+                        </ul>
+                        <a href="about.html" class="cta-button">Learn More About Us</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Showcase - Right Image, Left Text -->
-    <section class="content-section" style="padding: 80px 0; background: white;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 order-md-2" data-aos="fade-left" data-aos-duration="1000">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Construction Materials" class="img-fluid rounded shadow-lg">
-                    </div>
-                </div>
-                <div class="col-md-6 order-md-1" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="content-wrapper" style="padding-right: 40px;">
-                        <h2 style="font-size: 2.5rem; font-weight: 700; color: #1e3a8a; margin-bottom: 20px;">Comprehensive Trading Solutions</h2>
-                        <p style="font-size: 1.1rem; line-height: 1.8; color: #64748b; margin-bottom: 30px;">
-                            From premium construction materials to cutting-edge heavy equipment, we provide end-to-end trading solutions across multiple industries. Our extensive global network ensures competitive pricing and reliable delivery worldwide.
+    <!-- Section 2: Services Showcase - Right Image, Left Content -->
+    <section class="section section-alt">
+        <div class="content-container">
+            <div class="row">
+                <div class="col-50" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="content-wrapper">
+                        <h2 class="section-title">Comprehensive Trading Solutions</h2>
+                        <p class="section-subtitle">
+                            From premium construction materials to cutting-edge heavy equipment, we provide end-to-end trading solutions across multiple industries with guaranteed quality and competitive pricing.
                         </p>
-                        <div class="services-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;">
-                            <div class="service-item" style="text-align: center; padding: 20px; background: #f1f5f9; border-radius: 8px;">
-                                <img src="https://cdn-icons-png.flaticon.com/40/3588/3588435.png" alt="Construction" style="margin-bottom: 10px;">
-                                <h4 style="color: #1e3a8a; margin-bottom: 5px;">Construction</h4>
-                                <p style="font-size: 0.9rem; color: #64748b;">Premium materials</p>
+                        <div class="services-grid">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <img src="https://cdn-icons-png.flaticon.com/50/3588/3588435.png" alt="Construction">
+                                </div>
+                                <h4 class="service-title">Construction Materials</h4>
+                                <p class="service-description">Premium building materials and supplies</p>
                             </div>
-                            <div class="service-item" style="text-align: center; padding: 20px; background: #f1f5f9; border-radius: 8px;">
-                                <img src="https://cdn-icons-png.flaticon.com/40/1055/1055645.png" alt="Automotive" style="margin-bottom: 10px;">
-                                <h4 style="color: #1e3a8a; margin-bottom: 5px;">Automotive</h4>
-                                <p style="font-size: 0.9rem; color: #64748b;">Vehicle trading</p>
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <img src="https://cdn-icons-png.flaticon.com/50/1055/1055645.png" alt="Automotive">
+                                </div>
+                                <h4 class="service-title">Automotive Trading</h4>
+                                <p class="service-description">Vehicle trading and fleet solutions</p>
                             </div>
-                            <div class="service-item" style="text-align: center; padding: 20px; background: #f1f5f9; border-radius: 8px;">
-                                <img src="https://cdn-icons-png.flaticon.com/40/2972/2972531.png" alt="Machinery" style="margin-bottom: 10px;">
-                                <h4 style="color: #1e3a8a; margin-bottom: 5px;">Machinery</h4>
-                                <p style="font-size: 0.9rem; color: #64748b;">Heavy equipment</p>
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <img src="https://cdn-icons-png.flaticon.com/50/2972/2972531.png" alt="Machinery">
+                                </div>
+                                <h4 class="service-title">Heavy Equipment</h4>
+                                <p class="service-description">Industrial machinery and equipment</p>
                             </div>
-                            <div class="service-item" style="text-align: center; padding: 20px; background: #f1f5f9; border-radius: 8px;">
-                                <img src="https://cdn-icons-png.flaticon.com/40/2515/2515183.png" alt="Agriculture" style="margin-bottom: 10px;">
-                                <h4 style="color: #1e3a8a; margin-bottom: 5px;">Agriculture</h4>
-                                <p style="font-size: 0.9rem; color: #64748b;">Quality commodities</p>
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <img src="https://cdn-icons-png.flaticon.com/50/2515/2515183.png" alt="Agriculture">
+                                </div>
+                                <h4 class="service-title">Agricultural Commodities</h4>
+                                <p class="service-description">Quality spices and food products</p>
                             </div>
                         </div>
-                        <a href="services.html" class="cta-button" style="background: #1e3a8a; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-block; transition: all 0.3s ease;">Explore All Services</a>
+                        <a href="services.html" class="cta-button">Explore All Services</a>
+                    </div>
+                </div>
+                <div class="col-50" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Construction Materials">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Global Presence - Left Image, Right Text -->
-    <section class="content-section" style="padding: 80px 0; background: #f8fafc;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Global Logistics Network" class="img-fluid rounded shadow-lg">
+    <!-- Section 3: Global Logistics - Left Image, Right Content -->
+    <section class="section">
+        <div class="content-container">
+            <div class="row">
+                <div class="col-50" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Global Logistics Network">
                     </div>
                 </div>
-                <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="content-wrapper" style="padding-left: 40px;">
-                        <h2 style="font-size: 2.5rem; font-weight: 700; color: #1e3a8a; margin-bottom: 20px;">Global Logistics Excellence</h2>
-                        <p style="font-size: 1.1rem; line-height: 1.8; color: #64748b; margin-bottom: 30px;">
-                            Our advanced logistics network spans across continents, ensuring efficient freight forwarding, customs clearance, and supply chain management. With strategic partnerships worldwide, we deliver your products safely and on time.
+                <div class="col-50" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="content-wrapper">
+                        <h2 class="section-title">Global Logistics Excellence</h2>
+                        <p class="section-subtitle">
+                            Our advanced logistics network spans across continents, ensuring efficient freight forwarding, customs clearance, and supply chain management with real-time tracking and updates.
                         </p>
-                        <div class="stats-row" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-bottom: 30px;">
-                            <div class="stat-item" style="text-align: center;">
-                                <div class="stat-number" style="font-size: 2.5rem; font-weight: 700; color: #1e3a8a;">45+</div>
-                                <div class="stat-label" style="color: #64748b; font-weight: 500;">Countries Served</div>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number">45+</div>
+                                <div class="stat-label">Countries Served</div>
                             </div>
-                            <div class="stat-item" style="text-align: center;">
-                                <div class="stat-number" style="font-size: 2.5rem; font-weight: 700; color: #1e3a8a;">2500+</div>
-                                <div class="stat-label" style="color: #64748b; font-weight: 500;">Projects Delivered</div>
+                            <div class="stat-item">
+                                <div class="stat-number">2500+</div>
+                                <div class="stat-label">Projects Delivered</div>
                             </div>
-                            <div class="stat-item" style="text-align: center;">
-                                <div class="stat-number" style="font-size: 2.5rem; font-weight: 700; color: #1e3a8a;">500K+</div>
-                                <div class="stat-label" style="color: #64748b; font-weight: 500;">Tons Shipped</div>
+                            <div class="stat-item">
+                                <div class="stat-number">500K+</div>
+                                <div class="stat-label">Tons Shipped</div>
                             </div>
-                            <div class="stat-item" style="text-align: center;">
-                                <div class="stat-number" style="font-size: 2.5rem; font-weight: 700; color: #1e3a8a;">15+</div>
-                                <div class="stat-label" style="color: #64748b; font-weight: 500;">Years Experience</div>
+                            <div class="stat-item">
+                                <div class="stat-number">15+</div>
+                                <div class="stat-label">Years Experience</div>
                             </div>
                         </div>
-                        <a href="projects.html" class="cta-button" style="background: #1e3a8a; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-block; transition: all 0.3s ease;">View Our Projects</a>
+                        <a href="projects.html" class="cta-button">View Our Projects</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Global Flags Carousel -->
-    <section class="flags-carousel" data-aos="fade-up" data-aos-duration="1000">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 50px; font-size: 2.5rem; color: #1e3a8a;">Our Global Presence</h2>
-            <div class="flags-container" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px;">
-                <div class="flag-item" style="text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://flagcdn.com/w80/us.png" alt="United States" loading="lazy" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                    <span style="display: block; margin-top: 10px; font-weight: 600; color: #1e3a8a;">USA</span>
+    <!-- Section 4: Quality Assurance - Right Image, Left Content -->
+    <section class="section section-alt">
+        <div class="content-container">
+            <div class="row">
+                <div class="col-50" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="content-wrapper">
+                        <h2 class="section-title">Uncompromising Quality Standards</h2>
+                        <p class="section-subtitle">
+                            Every product undergoes rigorous quality inspection and certification processes. Our quality assurance team ensures that all materials meet international standards and client specifications.
+                        </p>
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <img src="https://cdn-icons-png.flaticon.com/24/3176/3176366.png" alt="Check" class="feature-icon">
+                                Multi-stage Quality Inspection Process
+                            </li>
+                            <li class="feature-item">
+                                <img src="https://cdn-icons-png.flaticon.com/24/3176/3176366.png" alt="Check" class="feature-icon">
+                                International Certification Compliance
+                            </li>
+                            <li class="feature-item">
+                                <img src="https://cdn-icons-png.flaticon.com/24/3176/3176366.png" alt="Check" class="feature-icon">
+                                Third-party Testing & Verification
+                            </li>
+                            <li class="feature-item">
+                                <img src="https://cdn-icons-png.flaticon.com/24/3176/3176366.png" alt="Check" class="feature-icon">
+                                Complete Documentation & Traceability
+                            </li>
+                        </ul>
+                        <a href="about.html#quality" class="cta-button">Quality Standards</a>
+                    </div>
                 </div>
-                <div class="flag-item" style="text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://flagcdn.com/w80/cn.png" alt="China" loading="lazy" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                    <span style="display: block; margin-top: 10px; font-weight: 600; color: #1e3a8a;">China</span>
+                <div class="col-50" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Quality Assurance">
+                    </div>
                 </div>
-                <div class="flag-item" style="text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://flagcdn.com/w80/in.png" alt="India" loading="lazy" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                    <span style="display: block; margin-top: 10px; font-weight: 600; color: #1e3a8a;">India</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infinite Scrolling Global Flags Section -->
+    <section class="flags-section">
+        <div class="content-container">
+            <h2 style="text-align: center; margin-bottom: 60px; font-size: 3rem; color: white;" data-aos="fade-up">Our Global Presence</h2>
+            <div class="flags-carousel">
+                <!-- First set of flags -->
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/us.png" alt="United States">
+                    <div class="flag-label">USA</div>
                 </div>
-                <div class="flag-item" style="text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://flagcdn.com/w80/de.png" alt="Germany" loading="lazy" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                    <span style="display: block; margin-top: 10px; font-weight: 600; color: #1e3a8a;">Germany</span>
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/cn.png" alt="China">
+                    <div class="flag-label">China</div>
                 </div>
-                <div class="flag-item" style="text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://flagcdn.com/w80/jp.png" alt="Japan" loading="lazy" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                    <span style="display: block; margin-top: 10px; font-weight: 600; color: #1e3a8a;">Japan</span>
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/in.png" alt="India">
+                    <div class="flag-label">India</div>
                 </div>
-                <div class="flag-item" style="text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://flagcdn.com/w80/gb.png" alt="United Kingdom" loading="lazy" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                    <span style="display: block; margin-top: 10px; font-weight: 600; color: #1e3a8a;">UK</span>
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/de.png" alt="Germany">
+                    <div class="flag-label">Germany</div>
                 </div>
-                <div class="flag-item" style="text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://flagcdn.com/w80/ca.png" alt="Canada" loading="lazy" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                    <span style="display: block; margin-top: 10px; font-weight: 600; color: #1e3a8a;">Canada</span>
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/jp.png" alt="Japan">
+                    <div class="flag-label">Japan</div>
                 </div>
-                <div class="flag-item" style="text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://flagcdn.com/w80/au.png" alt="Australia" loading="lazy" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                    <span style="display: block; margin-top: 10px; font-weight: 600; color: #1e3a8a;">Australia</span>
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/gb.png" alt="United Kingdom">
+                    <div class="flag-label">UK</div>
+                </div>
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/ca.png" alt="Canada">
+                    <div class="flag-label">Canada</div>
+                </div>
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/au.png" alt="Australia">
+                    <div class="flag-label">Australia</div>
+                </div>
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/fr.png" alt="France">
+                    <div class="flag-label">France</div>
+                </div>
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/br.png" alt="Brazil">
+                    <div class="flag-label">Brazil</div>
+                </div>
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/mx.png" alt="Mexico">
+                    <div class="flag-label">Mexico</div>
+                </div>
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/ae.png" alt="UAE">
+                    <div class="flag-label">UAE</div>
+                </div>
+                <!-- Duplicate set for infinite scroll -->
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/us.png" alt="United States">
+                    <div class="flag-label">USA</div>
+                </div>
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/cn.png" alt="China">
+                    <div class="flag-label">China</div>
+                </div>
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/in.png" alt="India">
+                    <div class="flag-label">India</div>
+                </div>
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/de.png" alt="Germany">
+                    <div class="flag-label">Germany</div>
+                </div>
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/jp.png" alt="Japan">
+                    <div class="flag-label">Japan</div>
+                </div>
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/gb.png" alt="United Kingdom">
+                    <div class="flag-label">UK</div>
+                </div>
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/ca.png" alt="Canada">
+                    <div class="flag-label">Canada</div>
+                </div>
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/au.png" alt="Australia">
+                    <div class="flag-label">Australia</div>
+                </div>
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/fr.png" alt="France">
+                    <div class="flag-label">France</div>
+                </div>
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/br.png" alt="Brazil">
+                    <div class="flag-label">Brazil</div>
+                </div>
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/mx.png" alt="Mexico">
+                    <div class="flag-label">Mexico</div>
+                </div>
+                <div class="flag-item">
+                    <img src="https://flagcdn.com/w80/ae.png" alt="UAE">
+                    <div class="flag-label">UAE</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Client Testimonials -->
-    <section class="testimonials" style="padding: 80px 0; background: white;" data-aos="fade-up" data-aos-duration="1000">
-        <div class="container">
+    <section class="section">
+        <div class="content-container">
             <div class="section-header" style="text-align: center; margin-bottom: 60px;">
                 <h2 style="font-size: 2.5rem; color: #1e3a8a; margin-bottom: 20px;">What Our Clients Say</h2>
                 <p style="font-size: 1.1rem; color: #64748b;">Trusted by industry leaders worldwide for reliable trading solutions</p>
@@ -332,97 +751,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Added responsive CSS styles for better mobile and desktop layout -->
-    <style>
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 -15px;
-        }
-        
-        .col-md-6 {
-            flex: 0 0 50%;
-            max-width: 50%;
-            padding: 0 15px;
-        }
-        
-        .align-items-center {
-            align-items: center;
-        }
-        
-        .img-fluid {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        .rounded {
-            border-radius: 12px;
-        }
-        
-        .shadow-lg {
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-        
-        .cta-button:hover {
-            background: #1e40af !important;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(30, 58, 138, 0.3);
-        }
-        
-        .flag-item:hover {
-            transform: translateY(-5px);
-        }
-        
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .col-md-6 {
-                flex: 0 0 100%;
-                max-width: 100%;
-                margin-bottom: 40px;
-            }
-            
-            .order-md-2 {
-                order: 1;
-            }
-            
-            .order-md-1 {
-                order: 2;
-            }
-            
-            .content-wrapper {
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr !important;
-            }
-            
-            .stats-row {
-                grid-template-columns: repeat(2, 1fr) !important;
-                gap: 20px !important;
-            }
-            
-            .flags-container {
-                gap: 20px !important;
-            }
-            
-            .testimonials-grid {
-                grid-template-columns: 1fr !important;
-            }
-            
-            h2 {
-                font-size: 2rem !important;
-            }
-        }
-    </style>
 
     <!-- Footer -->
     <footer class="footer" style="background: #1e3a8a; color: white; padding: 60px 0 20px;">
@@ -478,7 +806,6 @@
 
     <!-- JavaScript -->
     <script src="/assets/js/main.js"></script>
-    <!-- Added AOS animation library initialization -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
