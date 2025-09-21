@@ -1,0 +1,48 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Ahmed Al-Rashid",
+      "position": "Project Manager",
+      "company": "Emirates Construction Group",
+      "location": "Dubai, UAE",
+      "rating": 5,
+      "text": "Global Trade California delivered exceptional quality construction materials on time and within budget. Their attention to detail and professional service made our project a success.",
+      "image": "testimonial-ahmed.jpg",
+      "project": "Dubai Infrastructure Development"
+    },
+    {
+      "id": 2,
+      "name": "Maria Rodriguez",
+      "position": "Import Director",
+      "company": "Premium Auto Imports",
+      "location": "Los Angeles, USA",
+      "rating": 5,
+      "text": "Working with GTC has been a game-changer for our automotive import business. Their expertise in international logistics and quality assurance is unmatched.",
+      "image": "testimonial-maria.jpg",
+      "project": "European Automotive Fleet Export"
+    },
+    {
+      "id": 3,
+      "name": "Carlos Mendoza",
+      "position": "Operations Manager",
+      "company": "Andes Mining Corporation",
+      "location": "Santiago, Chile",
+      "rating": 5,
+      "text": "The heavy machinery supplied by Global Trade California has significantly improved our mining operations. Their technical support and after-sales service are outstanding.",
+      "image": "testimonial-carlos.jpg",
+      "project": "Mining Equipment Supply"
+    },
+    {
+      "id": 4,
+      "name": "Priya Sharma",
+      "position": "Export Manager",
+      "company": "Spice Valley Exports",
+      "location": "Mumbai, India",
+      "rating": 5,
+      "text": "GTC has been our trusted partner for spice exports to Europe. Their understanding of quality standards and regulatory compliance is exceptional.",
+      "image": "testimonial-priya.jpg",
+      "project": "Organic Spice Export Program"
+    }
+  ]
+}

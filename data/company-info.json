@@ -1,0 +1,57 @@
+{
+  "company": {
+    "name": "Global Trade California",
+    "tagline": "Connecting Markets, Building Futures",
+    "founded": 2010,
+    "headquarters": {
+      "address": "1234 Business Center Drive, Suite 500",
+      "city": "Los Angeles",
+      "state": "California",
+      "zipCode": "90210",
+      "country": "United States"
+    },
+    "contact": {
+      "phone": "+1 (555) 123-4567",
+      "email": "info@globaltradecalifornia.com",
+      "website": "https://globaltradecalifornia.com"
+    },
+    "socialMedia": {
+      "linkedin": "https://linkedin.com/company/global-trade-california",
+      "twitter": "https://twitter.com/gtcalifornia",
+      "facebook": "https://facebook.com/globaltradecalifornia"
+    }
+  },
+  "ceo": {
+    "name": "Sohail Mirza",
+    "title": "CEO & Founder",
+    "bio": "With over 15 years of experience in international trade and business development, Sohail Mirza founded Global Trade California with a vision to bridge markets across continents. His expertise in supply chain management, strategic partnerships, and cross-cultural business operations has positioned GTC as a trusted leader in global trading solutions.",
+    "quote": "Success in global trade isn't just about moving products—it's about building lasting relationships and creating value for communities worldwide.",
+    "education": "MBA in International Business, Stanford University",
+    "experience": "15+ years in international trade and logistics",
+    "languages": ["English", "Urdu", "Arabic", "Spanish"]
+  },
+  "statistics": {
+    "yearsInBusiness": 15,
+    "countriesServed": 25,
+    "projectsCompleted": 150,
+    "totalTradeValue": "$50M+",
+    "teamMembers": 45,
+    "warehouseLocations": 8
+  },
+  "certifications": [
+    "ISO 9001:2015 Quality Management",
+    "ISO 14001:2015 Environmental Management",
+    "OHSAS 18001 Occupational Health & Safety",
+    "C-TPAT Certified (Customs-Trade Partnership Against Terrorism)",
+    "AEO (Authorized Economic Operator)"
+  ],
+  "businessHours": {
+    "monday": "8:00 AM - 6:00 PM PST",
+    "tuesday": "8:00 AM - 6:00 PM PST",
+    "wednesday": "8:00 AM - 6:00 PM PST",
+    "thursday": "8:00 AM - 6:00 PM PST",
+    "friday": "8:00 AM - 6:00 PM PST",
+    "saturday": "9:00 AM - 2:00 PM PST",
+    "sunday": "Closed"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Dubai Infrastructure Development",
+      "category": "construction",
+      "location": "Dubai, UAE",
+      "value": "$2.5M",
+      "duration": "8 months",
+      "status": "completed",
+      "description": "Supplied premium construction materials including steel beams, cement, and aggregates for a major residential complex development.",
+      "image": "project-dubai-construction.jpg",
+      "client": "Emirates Construction Group",
+      "materials": ["Steel Beams", "Portland Cement", "Aggregates", "Rebar"]
+    },
+    {
+      "id": 2,
+      "title": "European Automotive Fleet Export",
+      "category": "automotive",
+      "location": "Germany to USA",
+      "value": "$1.8M",
+      "duration": "4 months",
+      "status": "completed",
+      "description": "Facilitated the export of 150 luxury vehicles from European manufacturers to North American dealerships.",
+      "image": "project-automotive-export.jpg",
+      "client": "Premium Auto Imports",
+      "vehicles": ["BMW", "Mercedes-Benz", "Audi", "Volkswagen"]
+    },
+    {
+      "id": 3,
+      "title": "Mining Equipment Supply - Chile",
+      "category": "machinery",
+      "location": "Santiago, Chile",
+      "value": "$3.2M",
+      "duration": "6 months",
+      "status": "completed",
+      "description": "Delivered heavy mining equipment including excavators, bulldozers, and processing machinery to copper mining operations.",
+      "image": "project-mining-equipment.jpg",
+      "client": "Andes Mining Corporation",
+      "equipment": ["Excavators", "Bulldozers", "Crushers", "Conveyor Systems"]
+    },
+    {
+      "id": 4,
+      "title": "Organic Spice Export Program",
+      "category": "agricultural",
+      "location": "India to Europe",
+      "value": "$950K",
+      "duration": "12 months",
+      "status": "ongoing",
+      "description": "Ongoing supply of premium organic spices including turmeric, cardamom, and black pepper to European food manufacturers.",
+      "image": "project-spice-export.jpg",
+      "client": "European Spice Consortium",
+      "products": ["Turmeric", "Cardamom", "Black Pepper", "Cinnamon"]
+    },
+    {
+      "id": 5,
+      "title": "Steel Scrap Recycling Initiative",
+      "category": "scrap",
+      "location": "California, USA",
+      "value": "$1.2M",
+      "duration": "ongoing",
+      "status": "ongoing",
+      "description": "Large-scale steel scrap collection and processing for recycling into new construction materials.",
+      "image": "project-scrap-recycling.jpg",
+      "client": "Pacific Steel Mills",
+      "materials": ["Steel Scrap", "Iron Scrap", "Aluminum Scrap", "Copper Scrap"]
+    },
+    {
+      "id": 6,
+      "title": "Agricultural Machinery - Brazil",
+      "category": "machinery",
+      "location": "São Paulo, Brazil",
+      "value": "$2.1M",
+      "duration": "5 months",
+      "status": "completed",
+      "description": "Supplied modern agricultural equipment including tractors, harvesters, and irrigation systems to large farming operations.",
+      "image": "project-agricultural-machinery.jpg",
+      "client": "Brasil Agro Solutions",
+      "equipment": ["Tractors", "Combine Harvesters", "Irrigation Systems", "Planting Equipment"]
+    }
+  ],
+  "statistics": {
+    "totalProjects": 150,
+    "countriesServed": 25,
+    "totalValue": "$50M+",
+    "yearsExperience": 15
+  }
+}
