@@ -667,50 +667,193 @@
                 font-size: 2rem;
             }
         }
+
+
+        .custom-hero-slider {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.custom-slider-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.custom-slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  display: flex; justify-content: center; align-items: center;
+}
+
+.custom-slide.active { opacity: 1; z-index: 2; }
+
+.custom-slide::before {
+  content: "";
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.45);
+}
+
+.custom-slide-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+  color: #fff;
+}
+
+.custom-slide-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: slideInLeft 1s forwards;
+}
+
+.custom-slide-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: slideInRight 1s forwards 0.3s;
+}
+
+.custom-cta-button {
+  display: inline-block;
+  background: #1e3a8a;
+  color: #fff;
+  padding: 15px 35px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeInUp 1s forwards 0.6s;
+}
+
+/* Navigation */
+.custom-slider-nav button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.2);
+  border: 2px solid #fff;
+  color: #fff;
+  width: 55px; height: 55px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: 0.3s;
+  z-index: 3;
+}
+.custom-prev-btn { left: 20px; }
+.custom-next-btn { right: 20px; }
+.custom-slider-nav button:hover { background: rgba(255,255,255,0.3); transform: scale(1.1) translateY(-50%); }
+
+/* Dots */
+.custom-slider-dots {
+  position: absolute;
+  bottom: 30px; left: 50%;
+  transform: translateX(-50%);
+  display: flex; gap: 12px;
+  z-index: 3;
+}
+.custom-dot {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.custom-dot.active { background: #fff; transform: scale(1.2); }
+
+/* Animations */
+@keyframes slideInLeft {
+  0% { opacity:0; transform:translateX(-100px); }
+  100% { opacity:1; transform:translateX(0); }
+}
+@keyframes slideInRight {
+  0% { opacity:0; transform:translateX(100px); }
+  100% { opacity:1; transform:translateX(0); }
+}
+@keyframes fadeInUp {
+  0% { opacity:0; transform:translateY(40px); }
+  100% { opacity:1; transform:translateY(0); }
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .custom-slide-title { font-size: 2.2rem; }
+  .custom-slide-subtitle { font-size: 1rem; }
+  .custom-cta-button { padding: 12px 25px; font-size: 1rem; }
+}
+@media(max-width:480px){
+  .custom-slide-title { font-size: 1.7rem; }
+  .custom-slide-subtitle { font-size: 0.9rem; }
+}
     </style>
     <!-- Added 5 new full-width sections with alternating animations for cars, spices, and scrap materials -->
-      <section class="hero-slider">
-        <div class="slider-container">
-            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')">
-                <div class="slide-content" data-aos="fade-up" data-aos-duration="1000">
-                    <h1>Global Trading Excellence</h1>
-                    <p>Connecting markets worldwide through reliable supply chain solutions</p>
-                    <a href="services.html" class="cta-button">Explore Services</a>
-                </div>
-            </div>
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')">
-                <div class="slide-content" data-aos="fade-up" data-aos-duration="1000">
-                    <h1>Heavy Equipment & Machinery</h1>
-                    <p>Premium industrial equipment sourced from trusted global manufacturers</p>
-                    <a href="services.html" class="cta-button">View Equipment</a>
-                </div>
-            </div>
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')">
-                <div class="slide-content" data-aos="fade-up" data-aos-duration="1000">
-                    <h1>Automotive Trading Solutions</h1>
-                    <p>Comprehensive vehicle trading and fleet management services</p>
-                    <a href="services.html" class="cta-button">Learn More</a>
-                </div>
-            </div>
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')">
-                <div class="slide-content" data-aos="fade-up" data-aos-duration="1000">
-                    <h1>Premium Agricultural Commodities</h1>
-                    <p>Quality spices and food products from certified global suppliers</p>
-                    <a href="services.html" class="cta-button">Discover Products</a>
-                </div>
-            </div>
-        </div>
-        <div class="slider-nav">
-            <button class="prev-btn">&lt;</button>
-            <button class="next-btn">&gt;</button>
-        </div>
-        <div class="slider-dots">
-            <span class="dot active" data-slide="0"></span>
-            <span class="dot" data-slide="1"></span>
-            <span class="dot" data-slide="2"></span>
-            <span class="dot" data-slide="3"></span>
-        </div>
-    </section>
+  <section class="custom-hero-slider">
+  <div class="custom-slider-container">
+    
+    <!-- Slide 1 -->
+    <div class="custom-slide active" style="background-image:url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2070&q=80');">
+      <div class="custom-slide-content">
+        <h1 class="custom-slide-title">Global Trading Excellence</h1>
+        <p class="custom-slide-subtitle">Connecting markets worldwide through reliable supply chain solutions</p>
+        <a href="services.html" class="custom-cta-button">Explore Services</a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="custom-slide" style="background-image:url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2070&q=80');">
+      <div class="custom-slide-content">
+        <h1 class="custom-slide-title">Heavy Equipment & Machinery</h1>
+        <p class="custom-slide-subtitle">Premium industrial equipment sourced from trusted global manufacturers</p>
+        <a href="services.html" class="custom-cta-button">View Equipment</a>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="custom-slide" style="background-image:url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=2070&q=80');">
+      <div class="custom-slide-content">
+        <h1 class="custom-slide-title">Automotive Trading Solutions</h1>
+        <p class="custom-slide-subtitle">Comprehensive vehicle trading and fleet management services</p>
+        <a href="services.html" class="custom-cta-button">Learn More</a>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="custom-slide" style="background-image:url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=2070&q=80');">
+      <div class="custom-slide-content">
+        <h1 class="custom-slide-title">Premium Agricultural Commodities</h1>
+        <p class="custom-slide-subtitle">Quality spices and food products from certified global suppliers</p>
+        <a href="services.html" class="custom-cta-button">Discover Products</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="custom-slider-nav">
+    <button class="custom-prev-btn">&lt;</button>
+    <button class="custom-next-btn">&gt;</button>
+  </div>
+
+  <!-- Dots -->
+  <div class="custom-slider-dots">
+    <span class="custom-dot active" data-slide="0"></span>
+    <span class="custom-dot" data-slide="1"></span>
+    <span class="custom-dot" data-slide="2"></span>
+    <span class="custom-dot" data-slide="3"></span>
+  </div>
+</section>
 
      <section style="width: 100%; background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; overflow: hidden; padding: 80px 0; margin: 0; box-sizing: border-box;">
         <div style="max-width: 1400px; margin: 0 auto; padding: 0 20px; text-align: center; margin-bottom: 60px;">
