@@ -707,143 +707,64 @@ setInterval(()=> { showSlide((currentIndex+1)%slides.length); }, 6000);
             }
         }
 
-
-        .custom-hero-slider {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.custom-slider-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
+.custom-hero-slider { position: relative; height: 100vh; overflow: hidden; }
+.custom-slider-container { width:100%; height:100%; position:relative; }
 
 .custom-slide {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  display: flex; justify-content: center; align-items: center;
+  position:absolute; inset:0;
+  background-size:cover; background-position:center;
+  display:flex; align-items:center; justify-content:center;
+  opacity:0; transition:opacity 1s ease-in-out;
 }
-
-.custom-slide.active { opacity: 1; z-index: 2; }
+.custom-slide.active { opacity:1; z-index:2; }
 
 .custom-slide::before {
-  content: "";
-  position: absolute; top: 0; left: 0;
-  width: 100%; height: 100%;
+  content:""; position:absolute; inset:0;
   background: rgba(0,0,0,0.45);
+  z-index:1;
+  pointer-events: none; /* IMPORTANT: allow clicks through overlay */
 }
 
-.custom-slide-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  max-width: 800px;
-  padding: 0 20px;
-  color: #fff;
-}
-
-.custom-slide-title {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  opacity: 0;
-  animation: slideInLeft 1s forwards;
-}
-
-.custom-slide-subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  opacity: 0;
-  animation: slideInRight 1s forwards 0.3s;
-}
-
+.custom-slide-content { position:relative; z-index:2; text-align:center; color:#fff; max-width:900px; padding:0 18px; }
+.custom-slide-title { font-size:3.5rem; font-weight:700; margin-bottom:18px; opacity:0; }
+.custom-slide-subtitle { font-size:1.15rem; margin-bottom:26px; opacity:0; }
 .custom-cta-button {
-  display: inline-block;
-  background: #1e3a8a;
-  color: #fff;
-  padding: 15px 35px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  opacity: 0;
-  animation: fadeInUp 1s forwards 0.6s;
+  display:inline-block; background:#1e3a8a; color:#fff; padding:12px 32px; border-radius:10px; text-decoration:none; font-weight:600; opacity:0;
 }
 
 /* Navigation */
 .custom-slider-nav button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255,255,255,0.2);
-  border: 2px solid #fff;
-  color: #fff;
-  width: 55px; height: 55px;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  cursor: pointer;
-  backdrop-filter: blur(8px);
-  transition: 0.3s;
-  z-index: 3;
+  position:absolute; top:50%; transform:translateY(-50%); z-index:4;
+  width:55px; height:55px; border-radius:50%; border:2px solid #fff;
+  background:rgba(255,255,255,0.18); color:#fff; cursor:pointer; backdrop-filter: blur(6px);
 }
-.custom-prev-btn { left: 20px; }
-.custom-next-btn { right: 20px; }
-.custom-slider-nav button:hover { background: rgba(255,255,255,0.3); transform: scale(1.1) translateY(-50%); }
+.custom-prev-btn { left:18px; } .custom-next-btn { right:18px; }
+.custom-slider-nav button:hover { transform: translateY(-50%) scale(1.08); }
 
 /* Dots */
-.custom-slider-dots {
-  position: absolute;
-  bottom: 30px; left: 50%;
-  transform: translateX(-50%);
-  display: flex; gap: 12px;
-  z-index: 3;
-}
-.custom-dot {
-  width: 14px; height: 14px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.5);
-  cursor: pointer;
-  transition: 0.3s;
-}
-.custom-dot.active { background: #fff; transform: scale(1.2); }
+.custom-slider-dots { position:absolute; bottom:28px; left:50%; transform:translateX(-50%); display:flex; gap:12px; z-index:4; }
+.custom-dot { width:14px; height:14px; border-radius:50%; background:rgba(255,255,255,0.5); cursor:pointer; display:inline-block; }
+.custom-dot.active { background:#fff; transform:scale(1.2); }
 
-/* Animations */
-@keyframes slideInLeft {
-  0% { opacity:0; transform:translateX(-100px); }
-  100% { opacity:1; transform:translateX(0); }
-}
-@keyframes slideInRight {
-  0% { opacity:0; transform:translateX(100px); }
-  100% { opacity:1; transform:translateX(0); }
-}
-@keyframes fadeInUp {
-  0% { opacity:0; transform:translateY(40px); }
-  100% { opacity:1; transform:translateY(0); }
-}
+/* Animations (applied via JS for re-triggering) */
+@keyframes slideInLeft { from {opacity:0; transform:translateX(-80px);} to {opacity:1; transform:translateX(0);} }
+@keyframes slideInRight { from {opacity:0; transform:translateX(80px);} to {opacity:1; transform:translateX(0);} }
+@keyframes fadeInUp { from {opacity:0; transform:translateY(32px);} to {opacity:1; transform:translateY(0);} }
 
-/* Responsive */
-@media(max-width:768px){
-  .custom-slide-title { font-size: 2.2rem; }
-  .custom-slide-subtitle { font-size: 1rem; }
-  .custom-cta-button { padding: 12px 25px; font-size: 1rem; }
+@media (max-width:768px) {
+  .custom-slide-title { font-size:2rem; }
+  .custom-slide-subtitle { font-size:1rem; }
+  .custom-slider-nav button { width:48px; height:48px; }
 }
-@media(max-width:480px){
-  .custom-slide-title { font-size: 1.7rem; }
-  .custom-slide-subtitle { font-size: 0.9rem; }
+@media (max-width:480px) {
+  .custom-slide-title { font-size:1.6rem; }
+  .custom-slide-subtitle { font-size:0.9rem; }
 }
     </style>
     <!-- Added 5 new full-width sections with alternating animations for cars, spices, and scrap materials -->
-  <section class="custom-hero-slider">
+ <section class="custom-hero-slider">
   <div class="custom-slider-container">
-    
-    <!-- Slide 1 -->
-    <div class="custom-slide active" style="background-image:url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2070&q=80');">
+    <div class="custom-slide active" style="background-image:url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2070&q=80')">
       <div class="custom-slide-content">
         <h1 class="custom-slide-title">Global Trading Excellence</h1>
         <p class="custom-slide-subtitle">Connecting markets worldwide through reliable supply chain solutions</p>
@@ -851,8 +772,7 @@ setInterval(()=> { showSlide((currentIndex+1)%slides.length); }, 6000);
       </div>
     </div>
 
-    <!-- Slide 2 -->
-    <div class="custom-slide" style="background-image:url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2070&q=80');">
+    <div class="custom-slide" style="background-image:url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2070&q=80')">
       <div class="custom-slide-content">
         <h1 class="custom-slide-title">Heavy Equipment & Machinery</h1>
         <p class="custom-slide-subtitle">Premium industrial equipment sourced from trusted global manufacturers</p>
@@ -860,8 +780,7 @@ setInterval(()=> { showSlide((currentIndex+1)%slides.length); }, 6000);
       </div>
     </div>
 
-    <!-- Slide 3 -->
-    <div class="custom-slide" style="background-image:url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=2070&q=80');">
+    <div class="custom-slide" style="background-image:url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=2070&q=80')">
       <div class="custom-slide-content">
         <h1 class="custom-slide-title">Automotive Trading Solutions</h1>
         <p class="custom-slide-subtitle">Comprehensive vehicle trading and fleet management services</p>
@@ -869,8 +788,7 @@ setInterval(()=> { showSlide((currentIndex+1)%slides.length); }, 6000);
       </div>
     </div>
 
-    <!-- Slide 4 -->
-    <div class="custom-slide" style="background-image:url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=2070&q=80');">
+    <div class="custom-slide" style="background-image:url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=2070&q=80')">
       <div class="custom-slide-content">
         <h1 class="custom-slide-title">Premium Agricultural Commodities</h1>
         <p class="custom-slide-subtitle">Quality spices and food products from certified global suppliers</p>
@@ -879,18 +797,16 @@ setInterval(()=> { showSlide((currentIndex+1)%slides.length); }, 6000);
     </div>
   </div>
 
-  <!-- Navigation -->
-  <div class="custom-slider-nav">
-    <button class="custom-prev-btn">&lt;</button>
-    <button class="custom-next-btn">&gt;</button>
+  <div class="custom-slider-nav" aria-hidden="false">
+    <button type="button" class="custom-prev-btn" aria-label="Previous slide">&lt;</button>
+    <button type="button" class="custom-next-btn" aria-label="Next slide">&gt;</button>
   </div>
 
-  <!-- Dots -->
-  <div class="custom-slider-dots">
-    <span class="custom-dot active" data-slide="0"></span>
-    <span class="custom-dot" data-slide="1"></span>
-    <span class="custom-dot" data-slide="2"></span>
-    <span class="custom-dot" data-slide="3"></span>
+  <div class="custom-slider-dots" role="tablist" aria-label="Slide navigation">
+    <span role="button" tabindex="0" class="custom-dot active" data-slide="0" aria-label="Go to slide 1"></span>
+    <span role="button" tabindex="0" class="custom-dot" data-slide="1" aria-label="Go to slide 2"></span>
+    <span role="button" tabindex="0" class="custom-dot" data-slide="2" aria-label="Go to slide 3"></span>
+    <span role="button" tabindex="0" class="custom-dot" data-slide="3" aria-label="Go to slide 4"></span>
   </div>
 </section>
 
