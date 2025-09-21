@@ -19,14 +19,17 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/services.css">
+    
+    <!-- Added AOS animation library for smooth animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <!-- Updated logo to use placeholder -->
-                <img src="https://via.placeholder.com/180x45/1e3a8a/ffffff?text=Global+Trade+CA" alt="Global Trade California Logo" width="180" height="45">
+                <!-- Fixed logo with proper branding -->
+                <h2 style="color: white; margin: 0; font-size: 1.5rem;">Global Trade California</h2>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
@@ -44,581 +47,328 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 100px 0; text-align: center;">
         <div class="container">
-            <div class="header-content">
-                <h1>Our Comprehensive Services</h1>
-                <p>End-to-end trading solutions across multiple industries and global markets</p>
+            <div class="header-content" data-aos="fade-up" data-aos-duration="1000">
+                <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 20px;">Our Comprehensive Services</h1>
+                <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">End-to-end trading solutions across multiple industries and global markets</p>
             </div>
         </div>
     </section>
 
-    <!-- Services Navigation -->
-    <section class="services-nav">
+    <!-- Completely restructured services with proper grid layout and responsive design -->
+    <!-- Construction Materials Section -->
+    <section id="construction" class="service-category" style="padding: 80px 0; background: #f8fafc;">
         <div class="container">
-            <div class="nav-tabs">
-                <button class="tab-btn active" data-category="all">All Services</button>
-                <button class="tab-btn" data-category="construction">Construction</button>
-                <button class="tab-btn" data-category="automotive">Automotive</button>
-                <button class="tab-btn" data-category="machinery">Machinery</button>
-                <button class="tab-btn" data-category="agriculture">Agriculture</button>
-                <button class="tab-btn" data-category="scrap">Scrap & Recycling</button>
-                <button class="tab-btn" data-category="logistics">Logistics</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Construction Materials -->
-    <section id="construction" class="service-category construction">
-        <div class="container">
-            <div class="category-header">
-                <div class="category-icon">
-                    <!-- Updated construction icon -->
+            <div class="category-header" style="text-align: center; margin-bottom: 60px;" data-aos="fade-up" data-aos-duration="1000">
+                <div class="category-icon" style="margin-bottom: 20px;">
                     <img src="https://cdn-icons-png.flaticon.com/80/3588/3588435.png" alt="Construction Materials" width="80" height="80">
                 </div>
-                <div class="category-info">
-                    <h2>Construction Materials Supply</h2>
-                    <p>Premium building materials sourced from certified global suppliers, ensuring quality and compliance with international standards.</p>
-                </div>
+                <h2 style="font-size: 2.5rem; color: #1e3a8a; margin-bottom: 20px;">Construction Materials Supply</h2>
+                <p style="font-size: 1.1rem; color: #64748b; max-width: 800px; margin: 0 auto;">Premium building materials sourced from certified global suppliers, ensuring quality and compliance with international standards.</p>
             </div>
-            <div class="services-grid">
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Updated cement icon -->
+            
+            <!-- Added showcase image for the category -->
+            <div class="category-showcase" style="margin-bottom: 60px;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Construction Materials Showcase" style="width: 100%; height: 300px; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
+            </div>
+            
+            <!-- Fixed services grid with proper 3-column desktop, 1-column mobile layout -->
+            <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+                <div class="service-item" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="service-icon" style="margin-bottom: 20px;">
                         <img src="https://cdn-icons-png.flaticon.com/50/3588/3588435.png" alt="Cement" width="50" height="50">
                     </div>
-                    <h3>Cement & Concrete</h3>
-                    <p>High-grade Portland cement, ready-mix concrete, and specialized concrete additives for construction projects of all scales.</p>
-                    <ul class="service-features">
-                        <li>Portland cement (Type I-V)</li>
-                        <li>Ready-mix concrete solutions</li>
-                        <li>Specialty concrete additives</li>
-                        <li>Quality certification included</li>
+                    <h3 style="color: #1e3a8a; margin-bottom: 15px; font-size: 1.3rem;">Cement & Concrete</h3>
+                    <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">High-grade Portland cement, ready-mix concrete, and specialized concrete additives for construction projects of all scales.</p>
+                    <ul class="service-features" style="list-style: none; padding: 0;">
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Portland cement (Type I-V)</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Ready-mix concrete solutions</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Specialty concrete additives</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Quality certification included</li>
                     </ul>
                 </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Updated steel icon -->
+                
+                <div class="service-item" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="service-icon" style="margin-bottom: 20px;">
                         <img src="https://cdn-icons-png.flaticon.com/50/3588/3588614.png" alt="Steel" width="50" height="50">
                     </div>
-                    <h3>Steel & Metal Products</h3>
-                    <p>Structural steel, reinforcement bars, metal sheets, and fabricated steel products from leading global manufacturers.</p>
-                    <ul class="service-features">
-                        <li>Structural steel beams & columns</li>
-                        <li>Reinforcement bars (rebar)</li>
-                        <li>Metal sheets & plates</li>
-                        <li>Custom fabrication services</li>
+                    <h3 style="color: #1e3a8a; margin-bottom: 15px; font-size: 1.3rem;">Steel & Metal Products</h3>
+                    <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">Structural steel, reinforcement bars, metal sheets, and fabricated steel products from leading global manufacturers.</p>
+                    <ul class="service-features" style="list-style: none; padding: 0;">
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Structural steel beams & columns</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Reinforcement bars (rebar)</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Metal sheets & plates</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Custom fabrication services</li>
                     </ul>
                 </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Updated tiles icon -->
+                
+                <div class="service-item" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="service-icon" style="margin-bottom: 20px;">
                         <img src="https://cdn-icons-png.flaticon.com/50/3588/3588592.png" alt="Tiles" width="50" height="50">
                     </div>
-                    <h3>Tiles & Flooring</h3>
-                    <p>Ceramic tiles, porcelain, natural stone, and premium flooring materials for residential and commercial applications.</p>
-                    <ul class="service-features">
-                        <li>Ceramic & porcelain tiles</li>
-                        <li>Natural stone products</li>
-                        <li>Luxury vinyl flooring</li>
-                        <li>Installation accessories</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Updated prefab icon -->
-                        <img src="https://cdn-icons-png.flaticon.com/50/2910/2910791.png" alt="Prefab" width="50" height="50">
-                    </div>
-                    <h3>Prefabricated Structures</h3>
-                    <p>Modular buildings, prefab homes, and industrial structures designed for quick assembly and durability.</p>
-                    <ul class="service-features">
-                        <li>Modular building systems</li>
-                        <li>Prefabricated homes</li>
-                        <li>Industrial structures</li>
-                        <li>Custom design solutions</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Updated paint icon -->
-                        <img src="https://cdn-icons-png.flaticon.com/50/1055/1055687.png" alt="Paint" width="50" height="50">
-                    </div>
-                    <h3>Paints & Coatings</h3>
-                    <p>Architectural paints, industrial coatings, and protective finishes from renowned international brands.</p>
-                    <ul class="service-features">
-                        <li>Architectural paint systems</li>
-                        <li>Industrial protective coatings</li>
-                        <li>Specialty finishes</li>
-                        <li>Color matching services</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Updated wood icon -->
-                        <img src="https://cdn-icons-png.flaticon.com/50/3588/3588314.png" alt="Wood" width="50" height="50">
-                    </div>
-                    <h3>Timber & Wood Products</h3>
-                    <p>Sustainable timber, engineered wood products, and lumber for construction and furniture applications.</p>
-                    <ul class="service-features">
-                        <li>Sustainable hardwood & softwood</li>
-                        <li>Engineered wood products</li>
-                        <li>Construction lumber</li>
-                        <li>FSC certified options</li>
+                    <h3 style="color: #1e3a8a; margin-bottom: 15px; font-size: 1.3rem;">Tiles & Flooring</h3>
+                    <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">Ceramic tiles, porcelain, natural stone, and premium flooring materials for residential and commercial applications.</p>
+                    <ul class="service-features" style="list-style: none; padding: 0;">
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Ceramic & porcelain tiles</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Natural stone products</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Luxury vinyl flooring</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Installation accessories</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Automotive Trading -->
-    <section id="automotive" class="service-category automotive">
+    <!-- Automotive Trading Section -->
+    <section id="automotive" class="service-category" style="padding: 80px 0; background: white;">
         <div class="container">
-            <div class="category-header">
-                <div class="category-icon">
-                    <!-- Updated automotive icon -->
+            <div class="category-header" style="text-align: center; margin-bottom: 60px;" data-aos="fade-up" data-aos-duration="1000">
+                <div class="category-icon" style="margin-bottom: 20px;">
                     <img src="https://cdn-icons-png.flaticon.com/80/1055/1055645.png" alt="Automotive Trading" width="80" height="80">
                 </div>
-                <div class="category-info">
-                    <h2>Automobile Trading</h2>
-                    <p>Comprehensive automotive solutions including vehicle trading, spare parts supply, and fleet management services.</p>
-                </div>
+                <h2 style="font-size: 2.5rem; color: #1e3a8a; margin-bottom: 20px;">Automobile Trading</h2>
+                <p style="font-size: 1.1rem; color: #64748b; max-width: 800px; margin: 0 auto;">Comprehensive automotive solutions including vehicle trading, spare parts supply, and fleet management services.</p>
             </div>
-            <div class="services-grid">
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Updated cars icon -->
+            
+            <div class="category-showcase" style="margin-bottom: 60px;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Automotive Trading Showcase" style="width: 100%; height: 300px; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
+            </div>
+            
+            <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+                <div class="service-item" style="background: #f8fafc; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="service-icon" style="margin-bottom: 20px;">
                         <img src="https://cdn-icons-png.flaticon.com/50/1055/1055645.png" alt="Cars" width="50" height="50">
                     </div>
-                    <h3>Passenger Vehicles</h3>
-                    <p>New and certified pre-owned cars from leading global manufacturers, with comprehensive warranty and support.</p>
-                    <ul class="service-features">
-                        <li>New vehicle imports</li>
-                        <li>Certified pre-owned vehicles</li>
-                        <li>Luxury & economy segments</li>
-                        <li>Warranty & service support</li>
+                    <h3 style="color: #1e3a8a; margin-bottom: 15px; font-size: 1.3rem;">Passenger Vehicles</h3>
+                    <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">New and certified pre-owned cars from leading global manufacturers, with comprehensive warranty and support.</p>
+                    <ul class="service-features" style="list-style: none; padding: 0;">
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> New vehicle imports</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Certified pre-owned vehicles</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Luxury & economy segments</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Warranty & service support</li>
                     </ul>
                 </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Updated trucks icon -->
+                
+                <div class="service-item" style="background: #f8fafc; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="service-icon" style="margin-bottom: 20px;">
                         <img src="https://cdn-icons-png.flaticon.com/50/2910/2910791.png" alt="Trucks" width="50" height="50">
                     </div>
-                    <h3>Commercial Vehicles</h3>
-                    <p>Trucks, buses, and commercial vehicles for transportation and logistics companies worldwide.</p>
-                    <ul class="service-features">
-                        <li>Heavy-duty trucks</li>
-                        <li>Passenger buses</li>
-                        <li>Delivery vehicles</li>
-                        <li>Fleet customization</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Updated spare parts icon -->
-                        <img src="https://cdn-icons-png.flaticon.com/50/3588/3588614.png" alt="Spare Parts" width="50" height="50">
-                    </div>
-                    <h3>Automotive Parts</h3>
-                    <p>Genuine and aftermarket spare parts, accessories, and components for all vehicle types and brands.</p>
-                    <ul class="service-features">
-                        <li>OEM genuine parts</li>
-                        <li>Quality aftermarket parts</li>
-                        <li>Performance accessories</li>
-                        <li>Bulk supply discounts</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Updated fleet icon -->
-                        <img src="https://cdn-icons-png.flaticon.com/50/3588/3588592.png" alt="Fleet" width="50" height="50">
-                    </div>
-                    <h3>Fleet Management</h3>
-                    <p>Complete fleet solutions including procurement, maintenance, and management services for corporate clients.</p>
-                    <ul class="service-features">
-                        <li>Fleet procurement</li>
-                        <li>Maintenance programs</li>
-                        <li>Leasing solutions</li>
-                        <li>Fleet tracking systems</li>
+                    <h3 style="color: #1e3a8a; margin-bottom: 15px; font-size: 1.3rem;">Commercial Vehicles</h3>
+                    <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">Trucks, buses, and commercial vehicles for transportation and logistics companies worldwide.</p>
+                    <ul class="service-features" style="list-style: none; padding: 0;">
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Heavy-duty trucks</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Passenger buses</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Delivery vehicles</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Fleet customization</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Heavy Equipment & Machinery -->
-    <section id="machinery" class="service-category machinery">
+    <!-- Heavy Equipment Section -->
+    <section id="machinery" class="service-category" style="padding: 80px 0; background: #f8fafc;">
         <div class="container">
-            <div class="category-header">
-                <div class="category-icon">
-                    <!-- Fixed machinery icon with CDN link -->
+            <div class="category-header" style="text-align: center; margin-bottom: 60px;" data-aos="fade-up" data-aos-duration="1000">
+                <div class="category-icon" style="margin-bottom: 20px;">
                     <img src="https://cdn-icons-png.flaticon.com/80/2972/2972531.png" alt="Heavy Equipment" width="80" height="80">
                 </div>
-                <div class="category-info">
-                    <h2>Heavy Equipment & Machinery</h2>
-                    <p>Industrial machinery, construction equipment, and specialized tools from world-renowned manufacturers.</p>
-                </div>
+                <h2 style="font-size: 2.5rem; color: #1e3a8a; margin-bottom: 20px;">Heavy Equipment & Machinery</h2>
+                <p style="font-size: 1.1rem; color: #64748b; max-width: 800px; margin: 0 auto;">Industrial machinery, construction equipment, and specialized tools from world-renowned manufacturers.</p>
             </div>
-            <!-- Added category showcase image -->
-            <div class="category-showcase">
-                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Heavy Equipment Showcase" loading="lazy">
+            
+            <div class="category-showcase" style="margin-bottom: 60px;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Heavy Equipment Showcase" style="width: 100%; height: 300px; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
             </div>
-            <div class="services-grid">
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Fixed excavator icon with CDN link -->
+            
+            <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+                <div class="service-item" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="service-icon" style="margin-bottom: 20px;">
                         <img src="https://cdn-icons-png.flaticon.com/50/2972/2972531.png" alt="Excavators" width="50" height="50">
                     </div>
-                    <h3>Excavators & Earthmoving</h3>
-                    <p>Hydraulic excavators, bulldozers, and earthmoving equipment for construction and mining operations.</p>
-                    <ul class="service-features">
-                        <li>Hydraulic excavators (all sizes)</li>
-                        <li>Bulldozers & graders</li>
-                        <li>Wheel loaders</li>
-                        <li>Specialized attachments</li>
+                    <h3 style="color: #1e3a8a; margin-bottom: 15px; font-size: 1.3rem;">Excavators & Earthmoving</h3>
+                    <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">Hydraulic excavators, bulldozers, and earthmoving equipment for construction and mining operations.</p>
+                    <ul class="service-features" style="list-style: none; padding: 0;">
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Hydraulic excavators (all sizes)</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Bulldozers & graders</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Wheel loaders</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Specialized attachments</li>
                     </ul>
                 </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Fixed crane icon with CDN link -->
+                
+                <div class="service-item" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="service-icon" style="margin-bottom: 20px;">
                         <img src="https://cdn-icons-png.flaticon.com/50/3588/3588614.png" alt="Cranes" width="50" height="50">
                     </div>
-                    <h3>Cranes & Lifting Equipment</h3>
-                    <p>Mobile cranes, tower cranes, and lifting equipment for construction and industrial applications.</p>
-                    <ul class="service-features">
-                        <li>Mobile & crawler cranes</li>
-                        <li>Tower cranes</li>
-                        <li>Overhead cranes</li>
-                        <li>Lifting accessories</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Fixed forklift icon with CDN link -->
-                        <img src="https://cdn-icons-png.flaticon.com/50/411/411763.png" alt="Forklifts" width="50" height="50">
-                    </div>
-                    <h3>Material Handling</h3>
-                    <p>Forklifts, warehouse equipment, and material handling solutions for logistics and manufacturing.</p>
-                    <ul class="service-features">
-                        <li>Electric & diesel forklifts</li>
-                        <li>Warehouse equipment</li>
-                        <li>Conveyor systems</li>
-                        <li>Storage solutions</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Fixed rental icon with CDN link -->
-                        <img src="https://cdn-icons-png.flaticon.com/50/2913/2913465.png" alt="Rental" width="50" height="50">
-                    </div>
-                    <h3>Equipment Rental & Leasing</h3>
-                    <p>Flexible rental and leasing options for construction equipment and industrial machinery.</p>
-                    <ul class="service-features">
-                        <li>Short & long-term rentals</li>
-                        <li>Lease-to-own options</li>
-                        <li>Maintenance included</li>
-                        <li>Operator training</li>
+                    <h3 style="color: #1e3a8a; margin-bottom: 15px; font-size: 1.3rem;">Cranes & Lifting Equipment</h3>
+                    <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">Mobile cranes, tower cranes, and lifting equipment for construction and industrial applications.</p>
+                    <ul class="service-features" style="list-style: none; padding: 0;">
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Mobile & crawler cranes</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Tower cranes</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Overhead cranes</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Lifting accessories</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Agricultural Commodities -->
-    <section id="agriculture" class="service-category agriculture">
+    <!-- Agricultural Commodities Section -->
+    <section id="agriculture" class="service-category" style="padding: 80px 0; background: white;">
         <div class="container">
-            <div class="category-header">
-                <div class="category-icon">
-                    <!-- Fixed agriculture icon with CDN link -->
+            <div class="category-header" style="text-align: center; margin-bottom: 60px;" data-aos="fade-up" data-aos-duration="1000">
+                <div class="category-icon" style="margin-bottom: 20px;">
                     <img src="https://cdn-icons-png.flaticon.com/80/2515/2515183.png" alt="Agricultural Commodities" width="80" height="80">
                 </div>
-                <div class="category-info">
-                    <h2>Food & Agricultural Commodities</h2>
-                    <p>Premium quality food products and agricultural commodities sourced from certified farms and suppliers worldwide.</p>
-                </div>
+                <h2 style="font-size: 2.5rem; color: #1e3a8a; margin-bottom: 20px;">Food & Agricultural Commodities</h2>
+                <p style="font-size: 1.1rem; color: #64748b; max-width: 800px; margin: 0 auto;">Premium quality food products and agricultural commodities sourced from certified farms and suppliers worldwide.</p>
             </div>
-            <!-- Added category showcase image -->
-            <div class="category-showcase">
-                <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Agricultural Commodities Showcase" loading="lazy">
+            
+            <div class="category-showcase" style="margin-bottom: 60px;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Agricultural Commodities Showcase" style="width: 100%; height: 300px; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
             </div>
-            <div class="services-grid">
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Fixed spices icon with CDN link -->
+            
+            <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+                <div class="service-item" style="background: #f8fafc; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="service-icon" style="margin-bottom: 20px;">
                         <img src="https://cdn-icons-png.flaticon.com/50/2515/2515183.png" alt="Spices" width="50" height="50">
                     </div>
-                    <h3>Spices & Seasonings</h3>
-                    <p>Authentic spices, herbs, and seasonings from origin countries, maintaining freshness and quality.</p>
-                    <ul class="service-features">
-                        <li>Whole & ground spices</li>
-                        <li>Organic certified options</li>
-                        <li>Custom spice blends</li>
-                        <li>Private labeling services</li>
+                    <h3 style="color: #1e3a8a; margin-bottom: 15px; font-size: 1.3rem;">Spices & Seasonings</h3>
+                    <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">Authentic spices, herbs, and seasonings from origin countries, maintaining freshness and quality.</p>
+                    <ul class="service-features" style="list-style: none; padding: 0;">
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Whole & ground spices</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Organic certified options</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Custom spice blends</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Private labeling services</li>
                     </ul>
                 </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Fixed rice icon with CDN link -->
+                
+                <div class="service-item" style="background: #f8fafc; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="service-icon" style="margin-bottom: 20px;">
                         <img src="https://cdn-icons-png.flaticon.com/50/3588/3588314.png" alt="Rice" width="50" height="50">
                     </div>
-                    <h3>Rice & Grains</h3>
-                    <p>Premium rice varieties, wheat, and other grains from leading agricultural regions globally.</p>
-                    <ul class="service-features">
-                        <li>Basmati & jasmine rice</li>
-                        <li>Wheat & flour products</li>
-                        <li>Specialty grain varieties</li>
-                        <li>Bulk packaging options</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Fixed pulses icon with CDN link -->
-                        <img src="https://cdn-icons-png.flaticon.com/50/1055/1055687.png" alt="Pulses" width="50" height="50">
-                    </div>
-                    <h3>Pulses & Legumes</h3>
-                    <p>High-quality lentils, chickpeas, beans, and other pulses for food processing and retail markets.</p>
-                    <ul class="service-features">
-                        <li>Lentils & chickpeas</li>
-                        <li>Black beans & kidney beans</li>
-                        <li>Split peas & pigeon peas</li>
-                        <li>Organic varieties available</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Fixed oils icon with CDN link -->
-                        <img src="https://cdn-icons-png.flaticon.com/50/3588/3588592.png" alt="Edible Oils" width="50" height="50">
-                    </div>
-                    <h3>Edible Oils</h3>
-                    <p>Refined and crude edible oils including palm oil, sunflower oil, and specialty cooking oils.</p>
-                    <ul class="service-features">
-                        <li>Palm & sunflower oil</li>
-                        <li>Coconut & olive oil</li>
-                        <li>Specialty cooking oils</li>
-                        <li>Bulk & retail packaging</li>
+                    <h3 style="color: #1e3a8a; margin-bottom: 15px; font-size: 1.3rem;">Rice & Grains</h3>
+                    <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">Premium rice varieties, wheat, and other grains from leading agricultural regions globally.</p>
+                    <ul class="service-features" style="list-style: none; padding: 0;">
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Basmati & jasmine rice</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Wheat & flour products</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Specialty grain varieties</li>
+                        <li style="display: flex; align-items: center; margin-bottom: 8px; color: #475569;"><img src="https://cdn-icons-png.flaticon.com/16/3176/3176366.png" alt="Check" style="margin-right: 10px;"> Bulk packaging options</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Scrap Trading & Recycling -->
-    <section id="scrap" class="service-category scrap">
-        <div class="container">
-            <div class="category-header">
-                <div class="category-icon">
-                    <!-- Fixed scrap icon with CDN link -->
-                    <img src="https://cdn-icons-png.flaticon.com/80/2913/2913465.png" alt="Scrap Trading" width="80" height="80">
-                </div>
-                <div class="category-info">
-                    <h2>Scrap Trading & Recycling</h2>
-                    <p>Sustainable scrap metal trading and comprehensive recycling solutions supporting circular economy principles.</p>
-                </div>
-            </div>
-            <!-- Added category showcase image -->
-            <div class="category-showcase">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Scrap Trading Showcase" loading="lazy">
-            </div>
-            <div class="services-grid">
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Fixed metal scrap icon with CDN link -->
-                        <img src="https://cdn-icons-png.flaticon.com/50/2913/2913465.png" alt="Metal Scrap" width="50" height="50">
-                    </div>
-                    <h3>Metal Scrap Trading</h3>
-                    <p>Ferrous and non-ferrous metal scraps including steel, aluminum, copper, and specialty metals.</p>
-                    <ul class="service-features">
-                        <li>Steel & iron scrap</li>
-                        <li>Aluminum & copper scrap</li>
-                        <li>Stainless steel scrap</li>
-                        <li>Precious metal recovery</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Fixed auto scrap icon with CDN link -->
-                        <img src="https://cdn-icons-png.flaticon.com/50/1055/1055645.png" alt="Auto Scrap" width="50" height="50">
-                    </div>
-                    <h3>Automotive Scrap</h3>
-                    <p>End-of-life vehicle processing, auto parts recycling, and automotive scrap metal recovery.</p>
-                    <ul class="service-features">
-                        <li>End-of-life vehicle processing</li>
-                        <li>Auto parts recycling</li>
-                        <li>Catalytic converter recovery</li>
-                        <li>Tire recycling services</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Fixed ship breaking icon with CDN link -->
-                        <img src="https://cdn-icons-png.flaticon.com/50/3588/3588614.png" alt="Ship Breaking" width="50" height="50">
-                    </div>
-                    <h3>Ship Breaking</h3>
-                    <p>Environmentally responsible ship dismantling and marine scrap metal recovery services.</p>
-                    <ul class="service-features">
-                        <li>Ship dismantling services</li>
-                        <li>Marine scrap recovery</li>
-                        <li>Environmental compliance</li>
-                        <li>Hazardous material handling</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Fixed e-waste icon with CDN link -->
-                        <img src="https://cdn-icons-png.flaticon.com/50/3176/3176366.png" alt="E-Waste" width="50" height="50">
-                    </div>
-                    <h3>Electronic Waste</h3>
-                    <p>Electronic waste processing, precious metal recovery, and responsible e-waste recycling solutions.</p>
-                    <ul class="service-features">
-                        <li>Electronic waste processing</li>
-                        <li>Precious metal extraction</li>
-                        <li>Data destruction services</li>
-                        <li>Certified recycling processes</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Logistics & Support Services -->
-    <section id="logistics" class="service-category logistics">
-        <div class="container">
-            <div class="category-header">
-                <div class="category-icon">
-                    <!-- Fixed logistics icon with CDN link -->
-                    <img src="https://cdn-icons-png.flaticon.com/80/411/411763.png" alt="Logistics" width="80" height="80">
-                </div>
-                <div class="category-info">
-                    <h2>Logistics & Support Services</h2>
-                    <p>Comprehensive logistics solutions including freight forwarding, customs clearance, and supply chain management.</p>
-                </div>
-            </div>
-            <!-- Added category showcase image -->
-            <div class="category-showcase">
-                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Logistics Services Showcase" loading="lazy">
-            </div>
-            <div class="services-grid">
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Fixed freight icon with CDN link -->
-                        <img src="https://cdn-icons-png.flaticon.com/50/411/411763.png" alt="Freight" width="50" height="50">
-                    </div>
-                    <h3>Freight Forwarding</h3>
-                    <p>Air, sea, and land freight services with global coverage and competitive rates.</p>
-                    <ul class="service-features">
-                        <li>Air freight services</li>
-                        <li>Ocean freight (FCL/LCL)</li>
-                        <li>Land transportation</li>
-                        <li>Multimodal solutions</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Fixed customs icon with CDN link -->
-                        <img src="https://cdn-icons-png.flaticon.com/50/3176/3176366.png" alt="Customs" width="50" height="50">
-                    </div>
-                    <h3>Customs Clearance</h3>
-                    <p>Expert customs brokerage and documentation services ensuring smooth international trade compliance.</p>
-                    <ul class="service-features">
-                        <li>Import/export documentation</li>
-                        <li>Customs brokerage</li>
-                        <li>Trade compliance</li>
-                        <li>Duty optimization</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Fixed warehouse icon with CDN link -->
-                        <img src="https://cdn-icons-png.flaticon.com/50/2910/2910791.png" alt="Warehousing" width="50" height="50">
-                    </div>
-                    <h3>Warehousing & Storage</h3>
-                    <p>Bonded warehouses, inventory management, and distribution services at strategic global locations.</p>
-                    <ul class="service-features">
-                        <li>Bonded warehouse facilities</li>
-                        <li>Inventory management</li>
-                        <li>Distribution services</li>
-                        <li>Temperature-controlled storage</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <!-- Fixed consulting icon with CDN link -->
-                        <img src="https://cdn-icons-png.flaticon.com/50/3135/3135715.png" alt="Consulting" width="50" height="50">
-                    </div>
-                    <h3>Business Consultancy</h3>
-                    <p>Market entry support, business development, and strategic consulting for international expansion.</p>
-                    <ul class="service-features">
-                        <li>Market entry strategies</li>
-                        <li>Business development</li>
-                        <li>Regulatory compliance</li>
-                        <li>Partnership facilitation</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Added responsive CSS styles and hover effects -->
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .category-showcase img {
+                height: 200px !important;
+            }
+            
+            h1 {
+                font-size: 2rem !important;
+            }
+            
+            h2 {
+                font-size: 2rem !important;
+            }
+            
+            .service-item {
+                padding: 20px !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .services-grid {
+                gap: 20px !important;
+            }
+        }
+    </style>
 
     <!-- Call to Action -->
-    <section class="services-cta">
+    <section class="services-cta" style="padding: 80px 0; background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; text-align: center;" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Start Your Global Trading Journey?</h2>
-                <p>Contact our expert team to discuss your specific requirements and discover how we can help you achieve your international trading goals.</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="cta-button primary">Get Quote</a>
-                    <a href="projects.html" class="cta-button secondary">View Projects</a>
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Ready to Start Your Global Trading Journey?</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">Contact our expert team to discuss your specific requirements and discover how we can help you achieve your international trading goals.</p>
+                <div class="cta-buttons" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="contact.html" class="cta-button primary" style="background: white; color: #1e3a8a; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease;">Get Quote</a>
+                    <a href="projects.html" class="cta-button secondary" style="background: transparent; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: 600; border: 2px solid white; transition: all 0.3s ease;">View Projects</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" style="background: #1e3a8a; color: white; padding: 60px 0 20px;">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
                 <div class="footer-section">
-                    <div class="footer-logo">
-                        <!-- Updated footer logo -->
-                        <img src="https://via.placeholder.com/180x45/1e3a8a/ffffff?text=Global+Trade+CA" alt="Global Trade California" width="180" height="45">
+                    <div class="footer-logo" style="margin-bottom: 20px;">
+                        <h2 style="color: white; margin: 0;">Global Trade California</h2>
                     </div>
-                    <p>Leading international trading company specializing in construction materials, vehicles, machinery, agricultural commodities, and scrap materials.</p>
-                    <div class="social-links">
-                        <!-- Updated social media icons -->
+                    <p style="line-height: 1.6; margin-bottom: 20px;">Leading international trading company specializing in construction materials, vehicles, machinery, agricultural commodities, and scrap materials.</p>
+                    <div class="social-links" style="display: flex; gap: 15px;">
                         <a href="#" aria-label="LinkedIn"><img src="https://cdn-icons-png.flaticon.com/24/174/174857.png" alt="LinkedIn" width="24" height="24"></a>
                         <a href="#" aria-label="Twitter"><img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter" width="24" height="24"></a>
                         <a href="#" aria-label="Facebook"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" width="24" height="24"></a>
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                    <h3 style="margin-bottom: 20px;">Quick Links</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><a href="about.html" style="color: #cbd5e1; text-decoration: none;">About Us</a></li>
+                        <li style="margin-bottom: 10px;"><a href="services.html" style="color: #cbd5e1; text-decoration: none;">Services</a></li>
+                        <li style="margin-bottom: 10px;"><a href="projects.html" style="color: #cbd5e1; text-decoration: none;">Projects</a></li>
+                        <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #cbd5e1; text-decoration: none;">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="services.html#construction">Construction Materials</a></li>
-                        <li><a href="services.html#automotive">Automobile Trading</a></li>
-                        <li><a href="services.html#machinery">Heavy Equipment</a></li>
-                        <li><a href="services.html#agriculture">Agricultural Commodities</a></li>
+                    <h3 style="margin-bottom: 20px;">Services</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><a href="services.html#construction" style="color: #cbd5e1; text-decoration: none;">Construction Materials</a></li>
+                        <li style="margin-bottom: 10px;"><a href="services.html#automotive" style="color: #cbd5e1; text-decoration: none;">Automobile Trading</a></li>
+                        <li style="margin-bottom: 10px;"><a href="services.html#machinery" style="color: #cbd5e1; text-decoration: none;">Heavy Equipment</a></li>
+                        <li style="margin-bottom: 10px;"><a href="services.html#agriculture" style="color: #cbd5e1; text-decoration: none;">Agricultural Commodities</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Contact Info</h3>
+                    <h3 style="margin-bottom: 20px;">Contact Info</h3>
                     <div class="contact-info">
-                        <p><strong>Address:</strong><br>1234 Trade Center Blvd<br>Los Angeles, CA 90210<br>United States</p>
-                        <p><strong>Phone:</strong><br>+1 (555) TRADE-01</p>
-                        <p><strong>Email:</strong><br>info@globaltradecalifornia.com</p>
+                        <p style="margin-bottom: 15px;"><strong>Address:</strong><br>1234 Trade Center Blvd<br>Los Angeles, CA 90210<br>United States</p>
+                        <p style="margin-bottom: 15px;"><strong>Phone:</strong><br>+1 (555) TRADE-01</p>
+                        <p style="margin-bottom: 15px;"><strong>Email:</strong><br>info@globaltradecalifornia.com</p>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Global Trade California. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="/privacy-policy.html">Privacy Policy</a>
-                    <a href="/terms-of-service.html">Terms of Service</a>
+            <div class="footer-bottom" style="border-top: 1px solid #334155; padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <p style="margin: 0;">&copy; 2024 Global Trade California. All rights reserved.</p>
+                <div class="footer-links" style="display: flex; gap: 20px;">
+                    <a href="/privacy-policy.html" style="color: #cbd5e1; text-decoration: none;">Privacy Policy</a>
+                    <a href="/terms-of-service.html" style="color: #cbd5e1; text-decoration: none;">Terms of Service</a>
                 </div>
             </div>
         </div>
@@ -627,5 +377,14 @@
     <!-- JavaScript -->
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/services.js"></script>
+    <!-- Added AOS animation library initialization -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 </html>
