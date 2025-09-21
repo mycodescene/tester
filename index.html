@@ -19,6 +19,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/main.css">
     
+    <!-- Added AOS animation library for smooth scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
     {
@@ -49,6 +52,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
+                <!-- Fixed logo with proper branding -->
                 <h2 style="color: white; margin: 0; font-size: 1.5rem;">Global Trade California</h2>
             </div>
             <ul class="nav-menu">
@@ -70,28 +74,28 @@
     <section class="hero-slider">
         <div class="slider-container">
             <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')">
-                <div class="slide-content">
+                <div class="slide-content" data-aos="fade-up" data-aos-duration="1000">
                     <h1>Global Trading Excellence</h1>
                     <p>Connecting markets worldwide through reliable supply chain solutions</p>
                     <a href="services.html" class="cta-button">Explore Services</a>
                 </div>
             </div>
             <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')">
-                <div class="slide-content">
+                <div class="slide-content" data-aos="fade-up" data-aos-duration="1000">
                     <h1>Heavy Equipment & Machinery</h1>
                     <p>Premium industrial equipment sourced from trusted global manufacturers</p>
                     <a href="services.html" class="cta-button">View Equipment</a>
                 </div>
             </div>
             <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')">
-                <div class="slide-content">
+                <div class="slide-content" data-aos="fade-up" data-aos-duration="1000">
                     <h1>Automotive Trading Solutions</h1>
                     <p>Comprehensive vehicle trading and fleet management services</p>
                     <a href="services.html" class="cta-button">Learn More</a>
                 </div>
             </div>
             <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')">
-                <div class="slide-content">
+                <div class="slide-content" data-aos="fade-up" data-aos-duration="1000">
                     <h1>Premium Agricultural Commodities</h1>
                     <p>Quality spices and food products from certified global suppliers</p>
                     <a href="services.html" class="cta-button">Discover Products</a>
@@ -110,244 +114,217 @@
         </div>
     </section>
 
+    <!-- Added alternating content sections with animations -->
+    <!-- About Us Section - Left Image, Right Text -->
+    <section class="content-section" style="padding: 80px 0; background: #f8fafc;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Global Trading Excellence" class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="content-wrapper" style="padding-left: 40px;">
+                        <h2 style="font-size: 2.5rem; font-weight: 700; color: #1e3a8a; margin-bottom: 20px;">15+ Years of Global Trading Excellence</h2>
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: #64748b; margin-bottom: 30px;">
+                            Global Trade California has been at the forefront of international trading, connecting businesses across 45+ countries with premium products and reliable supply chain solutions. Our expertise spans construction materials, automotive trading, heavy equipment, agricultural commodities, and sustainable recycling.
+                        </p>
+                        <div class="features-list" style="margin-bottom: 30px;">
+                            <div class="feature-item" style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <img src="https://cdn-icons-png.flaticon.com/24/3176/3176366.png" alt="Check" style="margin-right: 15px;">
+                                <span style="color: #475569;">ISO 9001:2015 Certified Quality Management</span>
+                            </div>
+                            <div class="feature-item" style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <img src="https://cdn-icons-png.flaticon.com/24/3176/3176366.png" alt="Check" style="margin-right: 15px;">
+                                <span style="color: #475569;">Global Network of Verified Suppliers</span>
+                            </div>
+                            <div class="feature-item" style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <img src="https://cdn-icons-png.flaticon.com/24/3176/3176366.png" alt="Check" style="margin-right: 15px;">
+                                <span style="color: #475569;">24/7 Customer Support & Project Tracking</span>
+                            </div>
+                        </div>
+                        <a href="about.html" class="cta-button" style="background: #1e3a8a; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-block; transition: all 0.3s ease;">Learn More About Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Showcase - Right Image, Left Text -->
+    <section class="content-section" style="padding: 80px 0; background: white;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 order-md-2" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Construction Materials" class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-1" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="content-wrapper" style="padding-right: 40px;">
+                        <h2 style="font-size: 2.5rem; font-weight: 700; color: #1e3a8a; margin-bottom: 20px;">Comprehensive Trading Solutions</h2>
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: #64748b; margin-bottom: 30px;">
+                            From premium construction materials to cutting-edge heavy equipment, we provide end-to-end trading solutions across multiple industries. Our extensive global network ensures competitive pricing and reliable delivery worldwide.
+                        </p>
+                        <div class="services-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;">
+                            <div class="service-item" style="text-align: center; padding: 20px; background: #f1f5f9; border-radius: 8px;">
+                                <img src="https://cdn-icons-png.flaticon.com/40/3588/3588435.png" alt="Construction" style="margin-bottom: 10px;">
+                                <h4 style="color: #1e3a8a; margin-bottom: 5px;">Construction</h4>
+                                <p style="font-size: 0.9rem; color: #64748b;">Premium materials</p>
+                            </div>
+                            <div class="service-item" style="text-align: center; padding: 20px; background: #f1f5f9; border-radius: 8px;">
+                                <img src="https://cdn-icons-png.flaticon.com/40/1055/1055645.png" alt="Automotive" style="margin-bottom: 10px;">
+                                <h4 style="color: #1e3a8a; margin-bottom: 5px;">Automotive</h4>
+                                <p style="font-size: 0.9rem; color: #64748b;">Vehicle trading</p>
+                            </div>
+                            <div class="service-item" style="text-align: center; padding: 20px; background: #f1f5f9; border-radius: 8px;">
+                                <img src="https://cdn-icons-png.flaticon.com/40/2972/2972531.png" alt="Machinery" style="margin-bottom: 10px;">
+                                <h4 style="color: #1e3a8a; margin-bottom: 5px;">Machinery</h4>
+                                <p style="font-size: 0.9rem; color: #64748b;">Heavy equipment</p>
+                            </div>
+                            <div class="service-item" style="text-align: center; padding: 20px; background: #f1f5f9; border-radius: 8px;">
+                                <img src="https://cdn-icons-png.flaticon.com/40/2515/2515183.png" alt="Agriculture" style="margin-bottom: 10px;">
+                                <h4 style="color: #1e3a8a; margin-bottom: 5px;">Agriculture</h4>
+                                <p style="font-size: 0.9rem; color: #64748b;">Quality commodities</p>
+                            </div>
+                        </div>
+                        <a href="services.html" class="cta-button" style="background: #1e3a8a; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-block; transition: all 0.3s ease;">Explore All Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Presence - Left Image, Right Text -->
+    <section class="content-section" style="padding: 80px 0; background: #f8fafc;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Global Logistics Network" class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="content-wrapper" style="padding-left: 40px;">
+                        <h2 style="font-size: 2.5rem; font-weight: 700; color: #1e3a8a; margin-bottom: 20px;">Global Logistics Excellence</h2>
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: #64748b; margin-bottom: 30px;">
+                            Our advanced logistics network spans across continents, ensuring efficient freight forwarding, customs clearance, and supply chain management. With strategic partnerships worldwide, we deliver your products safely and on time.
+                        </p>
+                        <div class="stats-row" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-bottom: 30px;">
+                            <div class="stat-item" style="text-align: center;">
+                                <div class="stat-number" style="font-size: 2.5rem; font-weight: 700; color: #1e3a8a;">45+</div>
+                                <div class="stat-label" style="color: #64748b; font-weight: 500;">Countries Served</div>
+                            </div>
+                            <div class="stat-item" style="text-align: center;">
+                                <div class="stat-number" style="font-size: 2.5rem; font-weight: 700; color: #1e3a8a;">2500+</div>
+                                <div class="stat-label" style="color: #64748b; font-weight: 500;">Projects Delivered</div>
+                            </div>
+                            <div class="stat-item" style="text-align: center;">
+                                <div class="stat-number" style="font-size: 2.5rem; font-weight: 700; color: #1e3a8a;">500K+</div>
+                                <div class="stat-label" style="color: #64748b; font-weight: 500;">Tons Shipped</div>
+                            </div>
+                            <div class="stat-item" style="text-align: center;">
+                                <div class="stat-number" style="font-size: 2.5rem; font-weight: 700; color: #1e3a8a;">15+</div>
+                                <div class="stat-label" style="color: #64748b; font-weight: 500;">Years Experience</div>
+                            </div>
+                        </div>
+                        <a href="projects.html" class="cta-button" style="background: #1e3a8a; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-block; transition: all 0.3s ease;">View Our Projects</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Global Flags Carousel -->
-    <section class="flags-carousel">
+    <section class="flags-carousel" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
-            <h2>Our Global Presence</h2>
-            <div class="flags-container">
-                <div class="flag-item">
-                    <img src="https://flagcdn.com/w80/us.png" alt="United States" loading="lazy">
-                    <span>USA</span>
+            <h2 style="text-align: center; margin-bottom: 50px; font-size: 2.5rem; color: #1e3a8a;">Our Global Presence</h2>
+            <div class="flags-container" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px;">
+                <div class="flag-item" style="text-align: center; transition: transform 0.3s ease;">
+                    <img src="https://flagcdn.com/w80/us.png" alt="United States" loading="lazy" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <span style="display: block; margin-top: 10px; font-weight: 600; color: #1e3a8a;">USA</span>
                 </div>
-                <div class="flag-item">
-                    <img src="https://flagcdn.com/w80/cn.png" alt="China" loading="lazy">
-                    <span>China</span>
+                <div class="flag-item" style="text-align: center; transition: transform 0.3s ease;">
+                    <img src="https://flagcdn.com/w80/cn.png" alt="China" loading="lazy" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <span style="display: block; margin-top: 10px; font-weight: 600; color: #1e3a8a;">China</span>
                 </div>
-                <div class="flag-item">
-                    <img src="https://flagcdn.com/w80/in.png" alt="India" loading="lazy">
-                    <span>India</span>
+                <div class="flag-item" style="text-align: center; transition: transform 0.3s ease;">
+                    <img src="https://flagcdn.com/w80/in.png" alt="India" loading="lazy" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <span style="display: block; margin-top: 10px; font-weight: 600; color: #1e3a8a;">India</span>
                 </div>
-                <div class="flag-item">
-                    <img src="https://flagcdn.com/w80/de.png" alt="Germany" loading="lazy">
-                    <span>Germany</span>
+                <div class="flag-item" style="text-align: center; transition: transform 0.3s ease;">
+                    <img src="https://flagcdn.com/w80/de.png" alt="Germany" loading="lazy" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <span style="display: block; margin-top: 10px; font-weight: 600; color: #1e3a8a;">Germany</span>
                 </div>
-                <div class="flag-item">
-                    <img src="https://flagcdn.com/w80/jp.png" alt="Japan" loading="lazy">
-                    <span>Japan</span>
+                <div class="flag-item" style="text-align: center; transition: transform 0.3s ease;">
+                    <img src="https://flagcdn.com/w80/jp.png" alt="Japan" loading="lazy" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <span style="display: block; margin-top: 10px; font-weight: 600; color: #1e3a8a;">Japan</span>
                 </div>
-                <div class="flag-item">
-                    <img src="https://flagcdn.com/w80/gb.png" alt="United Kingdom" loading="lazy">
-                    <span>UK</span>
+                <div class="flag-item" style="text-align: center; transition: transform 0.3s ease;">
+                    <img src="https://flagcdn.com/w80/gb.png" alt="United Kingdom" loading="lazy" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <span style="display: block; margin-top: 10px; font-weight: 600; color: #1e3a8a;">UK</span>
                 </div>
-                <div class="flag-item">
-                    <img src="https://flagcdn.com/w80/ca.png" alt="Canada" loading="lazy">
-                    <span>Canada</span>
+                <div class="flag-item" style="text-align: center; transition: transform 0.3s ease;">
+                    <img src="https://flagcdn.com/w80/ca.png" alt="Canada" loading="lazy" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <span style="display: block; margin-top: 10px; font-weight: 600; color: #1e3a8a;">Canada</span>
                 </div>
-                <div class="flag-item">
-                    <img src="https://flagcdn.com/w80/au.png" alt="Australia" loading="lazy">
-                    <span>Australia</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Showcase with Images -->
-    <section class="services-showcase">
-        <div class="container">
-            <div class="section-header">
-                <h2>Comprehensive Trading Solutions</h2>
-                <p>Discover our extensive range of services backed by 15+ years of global trading expertise</p>
-            </div>
-            <div class="showcase-grid">
-                <div class="showcase-item">
-                    <div class="showcase-image">
-                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Construction Materials" loading="lazy">
-                    </div>
-                    <div class="showcase-content">
-                        <h3>Construction Materials</h3>
-                        <p>Premium cement, steel, tiles, prefabs, paints, wood, and aggregates from certified global suppliers.</p>
-                        <ul class="showcase-features">
-                            <li>Portland cement & ready-mix concrete</li>
-                            <li>Structural steel & reinforcement bars</li>
-                            <li>Ceramic tiles & natural stone</li>
-                            <li>Sustainable timber products</li>
-                        </ul>
-                        <a href="services.html#construction" class="showcase-link">Explore Materials →</a>
-                    </div>
-                </div>
-                <div class="showcase-item">
-                    <div class="showcase-image">
-                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Automotive Trading" loading="lazy">
-                    </div>
-                    <div class="showcase-content">
-                        <h3>Automotive Trading</h3>
-                        <p>Complete vehicle trading solutions including cars, trucks, buses, spare parts, and fleet management.</p>
-                        <ul class="showcase-features">
-                            <li>New & certified pre-owned vehicles</li>
-                            <li>Commercial trucks & buses</li>
-                            <li>OEM & aftermarket parts</li>
-                            <li>Fleet management services</li>
-                        </ul>
-                        <a href="services.html#automotive" class="showcase-link">View Vehicles →</a>
-                    </div>
-                </div>
-                <div class="showcase-item">
-                    <div class="showcase-image">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Heavy Equipment" loading="lazy">
-                    </div>
-                    <div class="showcase-content">
-                        <h3>Heavy Equipment & Machinery</h3>
-                        <p>Industrial machinery, construction equipment, and specialized tools from world-renowned manufacturers.</p>
-                        <ul class="showcase-features">
-                            <li>Excavators & earthmoving equipment</li>
-                            <li>Cranes & lifting equipment</li>
-                            <li>Material handling solutions</li>
-                            <li>Rental & leasing options</li>
-                        </ul>
-                        <a href="services.html#machinery" class="showcase-link">Browse Equipment →</a>
-                    </div>
-                </div>
-                <div class="showcase-item">
-                    <div class="showcase-image">
-                        <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Agricultural Commodities" loading="lazy">
-                    </div>
-                    <div class="showcase-content">
-                        <h3>Agricultural Commodities</h3>
-                        <p>Premium quality spices, rice, pulses, fruits, vegetables, and edible oils from certified farms.</p>
-                        <ul class="showcase-features">
-                            <li>Authentic spices & seasonings</li>
-                            <li>Premium rice & grain varieties</li>
-                            <li>High-quality pulses & legumes</li>
-                            <li>Refined & crude edible oils</li>
-                        </ul>
-                        <a href="services.html#agriculture" class="showcase-link">View Products →</a>
-                    </div>
-                </div>
-                <div class="showcase-item">
-                    <div class="showcase-image">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Scrap Trading" loading="lazy">
-                    </div>
-                    <div class="showcase-content">
-                        <h3>Scrap Trading & Recycling</h3>
-                        <p>Sustainable scrap metal trading and comprehensive recycling solutions supporting circular economy.</p>
-                        <ul class="showcase-features">
-                            <li>Ferrous & non-ferrous metals</li>
-                            <li>Automotive scrap processing</li>
-                            <li>Ship breaking services</li>
-                            <li>Electronic waste recycling</li>
-                        </ul>
-                        <a href="services.html#scrap" class="showcase-link">Learn More →</a>
-                    </div>
-                </div>
-                <div class="showcase-item">
-                    <div class="showcase-image">
-                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Logistics Services" loading="lazy">
-                    </div>
-                    <div class="showcase-content">
-                        <h3>Logistics & Freight</h3>
-                        <p>Comprehensive logistics solutions including freight forwarding, customs clearance, and supply chain management.</p>
-                        <ul class="showcase-features">
-                            <li>Air, sea & land freight</li>
-                            <li>Customs clearance services</li>
-                            <li>Warehousing & distribution</li>
-                            <li>Business consultancy</li>
-                        </ul>
-                        <a href="services.html#logistics" class="showcase-link">Get Quote →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Industry Expertise & Certifications -->
-    <section class="industry-expertise">
-        <div class="container">
-            <div class="section-header">
-                <h2>Industry Expertise & Certifications</h2>
-                <p>Trusted by leading companies worldwide with comprehensive industry knowledge and certifications</p>
-            </div>
-            <div class="expertise-grid">
-                <div class="expertise-item">
-                    <div class="expertise-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/80/3176/3176366.png" alt="ISO Certified" width="60" height="60">
-                    </div>
-                    <h3>ISO 9001:2015 Certified</h3>
-                    <p>Quality management systems ensuring consistent service delivery and customer satisfaction.</p>
-                </div>
-                <div class="expertise-item">
-                    <div class="expertise-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/80/2913/2913465.png" alt="Global Network" width="60" height="60">
-                    </div>
-                    <h3>Global Supply Network</h3>
-                    <p>Extensive network of verified suppliers and manufacturers across 45+ countries worldwide.</p>
-                </div>
-                <div class="expertise-item">
-                    <div class="expertise-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/80/411/411763.png" alt="Logistics Excellence" width="60" height="60">
-                    </div>
-                    <h3>Logistics Excellence</h3>
-                    <p>Advanced supply chain management with real-time tracking and optimization capabilities.</p>
-                </div>
-                <div class="expertise-item">
-                    <div class="expertise-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/80/2972/2972531.png" alt="Technical Support" width="60" height="60">
-                    </div>
-                    <h3>Technical Support</h3>
-                    <p>Expert technical assistance and consultation for complex industrial requirements.</p>
+                <div class="flag-item" style="text-align: center; transition: transform 0.3s ease;">
+                    <img src="https://flagcdn.com/w80/au.png" alt="Australia" loading="lazy" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <span style="display: block; margin-top: 10px; font-weight: 600; color: #1e3a8a;">Australia</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Client Testimonials -->
-    <section class="testimonials">
+    <section class="testimonials" style="padding: 80px 0; background: white;" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
-            <div class="section-header">
-                <h2>What Our Clients Say</h2>
-                <p>Trusted by industry leaders worldwide for reliable trading solutions</p>
+            <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 2.5rem; color: #1e3a8a; margin-bottom: 20px;">What Our Clients Say</h2>
+                <p style="font-size: 1.1rem; color: #64748b;">Trusted by industry leaders worldwide for reliable trading solutions</p>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-item">
+            <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px;">
+                <div class="testimonial-item" style="background: #f8fafc; padding: 40px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
                     <div class="testimonial-content">
-                        <div class="quote-icon">
+                        <div class="quote-icon" style="margin-bottom: 20px;">
                             <img src="https://cdn-icons-png.flaticon.com/50/3135/3135715.png" alt="Quote" width="30" height="30">
                         </div>
-                        <p>"Global Trade California has been our trusted partner for construction materials for over 5 years. Their quality and reliability are unmatched."</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="John Smith" class="author-image">
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: #475569; margin-bottom: 30px;">"Global Trade California has been our trusted partner for construction materials for over 5 years. Their quality and reliability are unmatched."</p>
+                        <div class="testimonial-author" style="display: flex; align-items: center;">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="John Smith" class="author-image" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px;">
                             <div class="author-info">
-                                <h4>John Smith</h4>
-                                <span>CEO, BuildTech Solutions</span>
+                                <h4 style="color: #1e3a8a; margin-bottom: 5px;">John Smith</h4>
+                                <span style="color: #64748b;">CEO, BuildTech Solutions</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-item">
+                <div class="testimonial-item" style="background: #f8fafc; padding: 40px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
                     <div class="testimonial-content">
-                        <div class="quote-icon">
+                        <div class="quote-icon" style="margin-bottom: 20px;">
                             <img src="https://cdn-icons-png.flaticon.com/50/3135/3135715.png" alt="Quote" width="30" height="30">
                         </div>
-                        <p>"Exceptional service in automotive trading. They helped us expand our fleet with quality vehicles at competitive prices."</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sarah Johnson" class="author-image">
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: #475569; margin-bottom: 30px;">"Exceptional service in automotive trading. They helped us expand our fleet with quality vehicles at competitive prices."</p>
+                        <div class="testimonial-author" style="display: flex; align-items: center;">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sarah Johnson" class="author-image" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px;">
                             <div class="author-info">
-                                <h4>Sarah Johnson</h4>
-                                <span>Fleet Manager, TransGlobal Logistics</span>
+                                <h4 style="color: #1e3a8a; margin-bottom: 5px;">Sarah Johnson</h4>
+                                <span style="color: #64748b;">Fleet Manager, TransGlobal Logistics</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-item">
+                <div class="testimonial-item" style="background: #f8fafc; padding: 40px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
                     <div class="testimonial-content">
-                        <div class="quote-icon">
+                        <div class="quote-icon" style="margin-bottom: 20px;">
                             <img src="https://cdn-icons-png.flaticon.com/50/3135/3135715.png" alt="Quote" width="30" height="30">
                         </div>
-                        <p>"Their agricultural commodities division provides the finest spices and grains. Quality and authenticity guaranteed every time."</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Michael Chen" class="author-image">
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: #475569; margin-bottom: 30px;">"Their agricultural commodities division provides the finest spices and grains. Quality and authenticity guaranteed every time."</p>
+                        <div class="testimonial-author" style="display: flex; align-items: center;">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Michael Chen" class="author-image" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px;">
                             <div class="author-info">
-                                <h4>Michael Chen</h4>
-                                <span>Procurement Director, FoodCorp International</span>
+                                <h4 style="color: #1e3a8a; margin-bottom: 5px;">Michael Chen</h4>
+                                <span style="color: #64748b;">Procurement Director, FoodCorp International</span>
                             </div>
                         </div>
                     </div>
@@ -356,204 +333,144 @@
         </div>
     </section>
 
-    <!-- Our Trading Process -->
-    <section class="our-process">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Trading Process</h2>
-                <p>Streamlined workflow ensuring efficient and transparent international trading</p>
-            </div>
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">01</div>
-                    <div class="step-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/60/3135/3135715.png" alt="Consultation" width="50" height="50">
-                    </div>
-                    <h3>Initial Consultation</h3>
-                    <p>Understanding your specific requirements and providing tailored solutions</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">02</div>
-                    <div class="step-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/60/2910/2910791.png" alt="Sourcing" width="50" height="50">
-                    </div>
-                    <h3>Global Sourcing</h3>
-                    <p>Identifying and vetting suppliers from our extensive global network</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">03</div>
-                    <div class="step-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/60/3176/3176366.png" alt="Quality Check" width="50" height="50">
-                    </div>
-                    <h3>Quality Assurance</h3>
-                    <p>Rigorous quality checks and compliance verification before shipment</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">04</div>
-                    <div class="step-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/60/411/411763.png" alt="Logistics" width="50" height="50">
-                    </div>
-                    <h3>Logistics & Delivery</h3>
-                    <p>Efficient shipping and customs clearance with real-time tracking</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Statistics Counter -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number" data-target="45">0</div>
-                    <div class="stat-label">Countries Served</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="2500">0</div>
-                    <div class="stat-label">Projects Delivered</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="500000">0</div>
-                    <div class="stat-label">Tons Shipped</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="15">0</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Overview -->
-    <section class="services-overview">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Core Services</h2>
-                <p>Comprehensive trading solutions across multiple industries</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/512/3176/3176366.png" alt="Construction Materials" width="60" height="60">
-                    </div>
-                    <h3>Construction Materials</h3>
-                    <p>Premium cement, steel, tiles, prefabs, paints, wood, and aggregates from certified suppliers worldwide.</p>
-                    <a href="services.html#construction" class="service-link">Learn More</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" alt="Automobile Trading" width="60" height="60">
-                    </div>
-                    <h3>Automobile Trading</h3>
-                    <p>Cars, trucks, buses, spare parts, and fleet contracts with comprehensive support services.</p>
-                    <a href="services.html#automotive" class="service-link">Learn More</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/512/2972/2972531.png" alt="Heavy Equipment" width="60" height="60">
-                    </div>
-                    <h3>Heavy Equipment</h3>
-                    <p>Excavators, cranes, bulldozers, forklifts, and parts with rental and leasing options.</p>
-                    <a href="services.html#machinery" class="service-link">Learn More</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/512/2515/2515183.png" alt="Agricultural Commodities" width="60" height="60">
-                    </div>
-                    <h3>Agricultural Commodities</h3>
-                    <p>Quality spices, rice, pulses, fruits, vegetables, and edible oils from trusted farms.</p>
-                    <a href="services.html#agriculture" class="service-link">Learn More</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/512/2913/2913465.png" alt="Scrap Trading" width="60" height="60">
-                    </div>
-                    <h3>Scrap Trading</h3>
-                    <p>Metal scraps, auto scraps, ship-breaking, and e-waste with complete recycling solutions.</p>
-                    <a href="services.html#scrap" class="service-link">Learn More</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/512/411/411763.png" alt="Logistics" width="60" height="60">
-                    </div>
-                    <h3>Logistics & Freight</h3>
-                    <p>Air, sea, land transportation with customs clearance and warehousing services.</p>
-                    <a href="services.html#logistics" class="service-link">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="why-choose-us">
-        <div class="container">
-            <div class="content-wrapper">
-                <div class="text-content">
-                    <h2>Why Choose Global Trade California</h2>
-                    <p>With over 15 years of experience in international trading, we have established ourselves as a trusted partner for businesses worldwide. Our comprehensive approach combines industry expertise with cutting-edge logistics solutions.</p>
-                    <ul class="benefits-list">
-                        <li>Global network of verified suppliers and manufacturers</li>
-                        <li>End-to-end supply chain management</li>
-                        <li>Competitive pricing and flexible payment terms</li>
-                        <li>Quality assurance and compliance certification</li>
-                        <li>24/7 customer support and project tracking</li>
-                    </ul>
-                    <a href="about.html" class="cta-button">Learn About Us</a>
-                </div>
-                <div class="image-content">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Global Trading Network" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Added responsive CSS styles for better mobile and desktop layout -->
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+        
+        .col-md-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 0 15px;
+        }
+        
+        .align-items-center {
+            align-items: center;
+        }
+        
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .rounded {
+            border-radius: 12px;
+        }
+        
+        .shadow-lg {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .cta-button:hover {
+            background: #1e40af !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(30, 58, 138, 0.3);
+        }
+        
+        .flag-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .col-md-6 {
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin-bottom: 40px;
+            }
+            
+            .order-md-2 {
+                order: 1;
+            }
+            
+            .order-md-1 {
+                order: 2;
+            }
+            
+            .content-wrapper {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 20px !important;
+            }
+            
+            .flags-container {
+                gap: 20px !important;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            h2 {
+                font-size: 2rem !important;
+            }
+        }
+    </style>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" style="background: #1e3a8a; color: white; padding: 60px 0 20px;">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
                 <div class="footer-section">
-                    <div class="footer-logo">
+                    <div class="footer-logo" style="margin-bottom: 20px;">
                         <h2 style="color: white; margin: 0;">Global Trade California</h2>
                     </div>
-                    <p>Leading international trading company specializing in construction materials, vehicles, machinery, agricultural commodities, and scrap materials.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="LinkedIn"><img src="https://cdn-icons-png.flaticon.com/50/3135/3135715.png" alt="LinkedIn" width="24" height="24"></a>
-                        <a href="#" aria-label="Twitter"><img src="https://cdn-icons-png.flaticon.com/50/733/733579.png" alt="Twitter" width="24" height="24"></a>
-                        <a href="#" aria-label="Facebook"><img src="https://cdn-icons-png.flaticon.com/50/733/733547.png" alt="Facebook" width="24" height="24"></a>
+                    <p style="line-height: 1.6; margin-bottom: 20px;">Leading international trading company specializing in construction materials, vehicles, machinery, agricultural commodities, and scrap materials.</p>
+                    <div class="social-links" style="display: flex; gap: 15px;">
+                        <a href="#" aria-label="LinkedIn"><img src="https://cdn-icons-png.flaticon.com/24/174/174857.png" alt="LinkedIn" width="24" height="24"></a>
+                        <a href="#" aria-label="Twitter"><img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter" width="24" height="24"></a>
+                        <a href="#" aria-label="Facebook"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" width="24" height="24"></a>
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                    <h3 style="margin-bottom: 20px;">Quick Links</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><a href="about.html" style="color: #cbd5e1; text-decoration: none;">About Us</a></li>
+                        <li style="margin-bottom: 10px;"><a href="services.html" style="color: #cbd5e1; text-decoration: none;">Services</a></li>
+                        <li style="margin-bottom: 10px;"><a href="projects.html" style="color: #cbd5e1; text-decoration: none;">Projects</a></li>
+                        <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #cbd5e1; text-decoration: none;">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="services.html#construction">Construction Materials</a></li>
-                        <li><a href="services.html#automotive">Automobile Trading</a></li>
-                        <li><a href="services.html#machinery">Heavy Equipment</a></li>
-                        <li><a href="services.html#agriculture">Agricultural Commodities</a></li>
+                    <h3 style="margin-bottom: 20px;">Services</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><a href="services.html#construction" style="color: #cbd5e1; text-decoration: none;">Construction Materials</a></li>
+                        <li style="margin-bottom: 10px;"><a href="services.html#automotive" style="color: #cbd5e1; text-decoration: none;">Automobile Trading</a></li>
+                        <li style="margin-bottom: 10px;"><a href="services.html#machinery" style="color: #cbd5e1; text-decoration: none;">Heavy Equipment</a></li>
+                        <li style="margin-bottom: 10px;"><a href="services.html#agriculture" style="color: #cbd5e1; text-decoration: none;">Agricultural Commodities</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Contact Info</h3>
+                    <h3 style="margin-bottom: 20px;">Contact Info</h3>
                     <div class="contact-info">
-                        <p><strong>Address:</strong><br>1234 Trade Center Blvd<br>Los Angeles, CA 90210<br>United States</p>
-                        <p><strong>Phone:</strong><br>+1 (555) TRADE-01</p>
-                        <p><strong>Email:</strong><br>info@globaltradecalifornia.com</p>
+                        <p style="margin-bottom: 15px;"><strong>Address:</strong><br>1234 Trade Center Blvd<br>Los Angeles, CA 90210<br>United States</p>
+                        <p style="margin-bottom: 15px;"><strong>Phone:</strong><br>+1 (555) TRADE-01</p>
+                        <p style="margin-bottom: 15px;"><strong>Email:</strong><br>info@globaltradecalifornia.com</p>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Global Trade California. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="/privacy-policy.html">Privacy Policy</a>
-                    <a href="/terms-of-service.html">Terms of Service</a>
+            <div class="footer-bottom" style="border-top: 1px solid #334155; padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <p style="margin: 0;">&copy; 2024 Global Trade California. All rights reserved.</p>
+                <div class="footer-links" style="display: flex; gap: 20px;">
+                    <a href="/privacy-policy.html" style="color: #cbd5e1; text-decoration: none;">Privacy Policy</a>
+                    <a href="/terms-of-service.html" style="color: #cbd5e1; text-decoration: none;">Terms of Service</a>
                 </div>
             </div>
         </div>
@@ -561,5 +478,14 @@
 
     <!-- JavaScript -->
     <script src="/assets/js/main.js"></script>
+    <!-- Added AOS animation library initialization -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 </html>
