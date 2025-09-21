@@ -46,44 +46,90 @@
         }
     }
 
-        const slides = document.querySelectorAll(".custom-slide");
-const dots = document.querySelectorAll(".custom-dot");
-let currentIndex = 0;
+       /* ===== ROBUST SLIDER JS (safe: waits for DOM) ===== */
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = Array.from(document.querySelectorAll('.custom-slide'));
+  const dots = Array.from(document.querySelectorAll('.custom-dot'));
+  const prevBtn = document.querySelector('.custom-prev-btn');
+  const nextBtn = document.querySelector('.custom-next-btn');
+  const container = document.querySelector('.custom-slider-container');
 
-function showSlide(index){
-  slides.forEach((s,i)=> {
-    s.classList.remove("active");
-    dots[i].classList.remove("active");
+  if (!slides.length) return; // nothing to do
+
+  // start with the first active slide or index 0
+  let currentIndex = slides.findIndex(s => s.classList.contains('active'));
+  if (currentIndex === -1) currentIndex = 0;
+
+  // Helper to (re)trigger animations on elements inside a slide
+  function triggerSlideAnimations(slideEl) {
+    const title = slideEl.querySelector('.custom-slide-title');
+    const subtitle = slideEl.querySelector('.custom-slide-subtitle');
+    const cta = slideEl.querySelector('.custom-cta-button');
+    [title, subtitle, cta].forEach(el => {
+      if (!el) return;
+      el.style.animation = 'none';
+      el.style.animationDelay = '';
+      // force reflow so animation restarts
+      void el.offsetWidth;
+    });
+    if (title) { title.style.animation = 'slideInLeft 900ms forwards'; title.style.animationDelay = '0s'; }
+    if (subtitle) { subtitle.style.animation = 'slideInRight 900ms forwards'; subtitle.style.animationDelay = '160ms'; }
+    if (cta) { cta.style.animation = 'fadeInUp 900ms forwards'; cta.style.animationDelay = '420ms'; }
+  }
+
+  // Show slide by index (wraps correctly)
+  function showSlide(index) {
+    index = ((index % slides.length) + slides.length) % slides.length;
+    slides.forEach((s, i) => s.classList.toggle('active', i === index));
+    dots.forEach((d, i) => d.classList.toggle('active', i === index));
+    triggerSlideAnimations(slides[index]);
+    currentIndex = index;
+  }
+
+  // Prev / Next handlers
+  prevBtn?.addEventListener('click', () => { showSlide(currentIndex - 1); resetAutoSlide(); });
+  nextBtn?.addEventListener('click', () => { showSlide(currentIndex + 1); resetAutoSlide(); });
+
+  // Dots handlers, plus keyboard enter/space support
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => { showSlide(i); resetAutoSlide(); });
+    dot.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showSlide(i); resetAutoSlide(); }
+    });
   });
-  slides[index].classList.add("active");
-  dots[index].classList.add("active");
 
-  // restart animations
-  const title = slides[index].querySelector(".custom-slide-title");
-  const subtitle = slides[index].querySelector(".custom-slide-subtitle");
-  const button = slides[index].querySelector(".custom-cta-button");
+  // Touch / swipe support for mobile
+  let startX = 0;
+  container?.addEventListener('touchstart', (e) => { startX = e.changedTouches[0].clientX; }, {passive:true});
+  container?.addEventListener('touchend', (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const diff = endX - startX;
+    if (Math.abs(diff) > 40) {
+      if (diff < 0) showSlide(currentIndex + 1);
+      else showSlide(currentIndex - 1);
+      resetAutoSlide();
+    }
+  }, {passive:true});
 
-  [title, subtitle, button].forEach(el => {
-    el.style.animation = "none";
-    void el.offsetWidth; // reflow trick
+  // Auto-slide (with reset)
+  let autoId = null;
+  function startAutoSlide() { autoId = setInterval(() => showSlide(currentIndex + 1), 6000); }
+  function resetAutoSlide() { if (autoId) clearInterval(autoId); startAutoSlide(); }
+
+  // initialize
+  showSlide(currentIndex);
+  startAutoSlide();
+
+  // Optional: pause auto-slide while user hovers (desktop)
+  document.querySelector('.custom-hero-slider')?.addEventListener('mouseenter', () => { if (autoId) clearInterval(autoId); });
+  document.querySelector('.custom-hero-slider')?.addEventListener('mouseleave', () => { resetAutoSlide(); });
+
+  // resume on visibility change (if user switches tabs)
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) { if (autoId) clearInterval(autoId); }
+    else resetAutoSlide();
   });
-  title.style.animation = "slideInLeft 1s forwards";
-  subtitle.style.animation = "slideInRight 1s forwards 0.3s";
-  button.style.animation = "fadeInUp 1s forwards 0.6s";
-
-  currentIndex = index;
-}
-
-document.querySelector(".custom-prev-btn").onclick = ()=> {
-  showSlide((currentIndex-1+slides.length)%slides.length);
-};
-document.querySelector(".custom-next-btn").onclick = ()=> {
-  showSlide((currentIndex+1)%slides.length);
-};
-dots.forEach((dot,i)=> dot.onclick=()=> showSlide(i));
-
-// auto-slide
-setInterval(()=> { showSlide((currentIndex+1)%slides.length); }, 6000);
+});
     </script>
 
     <!-- Added comprehensive responsive styles for full-width layout -->
