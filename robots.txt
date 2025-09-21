@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://globaltradecalifornia.vercel.app/sitemap.xml
+
+# Disallow admin areas (if any in future)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow all assets
+Allow: /assets/
+Allow: /data/

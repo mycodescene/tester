@@ -1,0 +1,101 @@
+GLOBAL TRADE CALIFORNIA - DEPLOYMENT GUIDE
+==========================================
+
+QUICK START
+-----------
+1. Download the ZIP file containing all website files
+2. Extract to your desired location
+3. Upload to Vercel, Netlify, or your hosting provider
+4. The site is ready to go live!
+
+VERCEL DEPLOYMENT (RECOMMENDED)
+-------------------------------
+1. Visit vercel.com and create an account
+2. Click "New Project"
+3. Drag and drop the extracted folder
+4. Vercel will automatically detect the configuration
+5. Click "Deploy"
+6. Your site will be live at: https://your-project-name.vercel.app
+
+CUSTOM DOMAIN SETUP
+-------------------
+1. In Vercel dashboard, go to your project
+2. Click "Settings" > "Domains"
+3. Add your custom domain (e.g., globaltradecalifornia.com)
+4. Follow DNS configuration instructions
+5. SSL certificate is automatically provided
+
+FILE STRUCTURE OVERVIEW
+-----------------------
+- index.html: Homepage with hero slider and company overview
+- about.html: Company history, CEO profile, and values
+- services.html: Complete services catalog with filtering
+- projects.html: Project showcase and case studies
+- contact.html: Contact form and company information
+- assets/: All CSS, JavaScript, and images
+- data/: JSON files with project and testimonial data
+- vercel.json: Deployment configuration
+- robots.txt & sitemap.xml: SEO optimization files
+
+CUSTOMIZATION CHECKLIST
+-----------------------
+□ Replace CEO photo (assets/img/ceo-sohail-mirza.jpg)
+□ Update company contact information in footer
+□ Replace placeholder project images
+□ Update testimonial photos and information
+□ Modify service descriptions as needed
+□ Update company address and phone numbers
+□ Replace hero slider images with company photos
+□ Update social media links in footer
+
+IMAGE REPLACEMENT GUIDE
+-----------------------
+Key images to replace with real photos:
+- ceo-sohail-mirza.jpg (Professional headshot)
+- hero-slide-1.jpg (Company operations)
+- hero-slide-2.jpg (International shipping)
+- hero-slide-3.jpg (Team or facilities)
+- All project-*.jpg files (Real project photos)
+- All testimonial-*.jpg files (Client photos)
+
+CONTENT UPDATES
+--------------
+1. Company Information:
+   - Edit contact details in all HTML files
+   - Update data/company-info.json
+   
+2. Services:
+   - Modify service descriptions in services.html
+   - Update pricing or contact information
+   
+3. Projects:
+   - Edit data/projects.json with real project data
+   - Update project images and descriptions
+   
+4. About Page:
+   - Update CEO biography and quote
+   - Modify company history and achievements
+
+SEO OPTIMIZATION
+---------------
+- Update meta titles and descriptions in each HTML file
+- Modify sitemap.xml with your actual domain
+- Update robots.txt if needed
+- Add Google Analytics code if required
+- Submit sitemap to Google Search Console
+
+PERFORMANCE TIPS
+----------------
+- Optimize images (use WebP format when possible)
+- Enable compression on your hosting provider
+- Use a CDN for faster global loading
+- Monitor Core Web Vitals with Google PageSpeed Insights
+
+SUPPORT
+-------
+For technical assistance:
+- Check README.md for detailed documentation
+- Contact: support@globaltradecalifornia.com
+- Phone: +1 (555) 123-4567
+
+The website is fully responsive, SEO-optimized, and ready for production use!
