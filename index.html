@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Trade California - International Trading Solutions</title>
+    <title>Global Trade California - Premium Trading Solutions</title>
     <meta name="description" content="Global Trade California specializes in international trading of construction materials, vehicles, machinery, spices, and scrap materials. Headquartered in California, USA.">
     <meta name="keywords" content="global trade, international trading, construction materials, vehicles, machinery, spices, scrap trading, California">
     
@@ -21,6 +21,9 @@
     
     <!-- Added AOS animation library and custom full-width responsive styles -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Added Font Awesome CDN for reliable icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
@@ -59,6 +62,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
+            overflow-x: hidden;
         }
 
         /* Header Styles */
@@ -404,6 +408,46 @@
                 grid-template-columns: 1fr !important;
             }
         }
+
+        /* Added icon animation styles */
+        .animated-icon {
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .animated-icon:hover {
+            transform: scale(1.2) rotate(5deg);
+            color: #3b82f6;
+        }
+
+        .pulse-icon {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .bounce-icon {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        .rotate-icon {
+            animation: rotate 3s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
@@ -484,101 +528,101 @@
             <div style="display: inline-flex; animation: scroll 30s linear infinite; gap: 60px; align-items: center;">
                 <!-- First set of flags -->
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/us%281%29-bdDrzKpDeJYx3srn6mmgdxHlQ9evLS.png" alt="USA" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/us%281%29-dHgDqTibn6P78bcxNvy5KSPa8LbxUj.png" alt="USA" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">USA</div>
                 </div>
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/cn%281%29-DcQ2jHNR4tGfrDNz6cmsbZTxFgRvnf.png" alt="China" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/cn%281%29-Lw5NF5i65UrFpFV26znRjgyIq29dfv.png" alt="China" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">China</div>
                 </div>
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/de%281%29-oFspEwZCLTHcAkqIy2mOZebxqBlnaj.png" alt="Germany" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/de%281%29-wI3FMGznhdReXTN0NPrMWA3q5JV2GX.png" alt="Germany" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">Germany</div>
                 </div>
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/jp%281%29-dKQ2t0X7sz8XVK9EdapUN8oNRF8d2e.png" alt="Japan" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/jp%281%29-1ulNTq2Axz7H0YUWXCHEqnkV0QX2dS.png" alt="Japan" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">Japan</div>
                 </div>
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/gb%281%29-KtsisIhQhfcsiKb66eTVs5HPd68sgn.png" alt="UK" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/gb%281%29-03v0yQjqvHl0hzCq7uIBAc0B7xtjJG.png" alt="UK" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">UK</div>
                 </div>
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/ca%281%29-RbRvJ9ZmkaFNUIimpuT4poZjtJ2hji.png" alt="Canada" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/ca%281%29-F2Va2Ipuvb9aRxSSo5yDWwKaczwQxb.png" alt="Canada" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">Canada</div>
                 </div>
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/au%281%29-gxf7erEVfAq7evfmtKOZpodQSm4iso.png" alt="Australia" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/au%281%29-ZhKlBZ4w8vE5YnJmKbOXQNVzwQ3Dop.png" alt="Australia" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">Australia</div>
                 </div>
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/fr%281%29-2DYFrC0cu7ac5wn7fU5ajwZ4BFkARC.png" alt="France" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/fr%281%29-ngF03DCG1xPAJLIoAcfsTGX8iUyncE.png" alt="France" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">France</div>
                 </div>
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/br%281%29-fHDhwGFuHgXd5dInwhuhZxONh5rRVp.png" alt="Brazil" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/br%281%29-KJbSStu9T5vtt65tQ9r7ZZLGiLfLqB.png" alt="Brazil" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">Brazil</div>
                 </div>
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/mx%281%29-Ww2bgFQcXjAqmU6NDXy2xhoRTikjfv.png" alt="Mexico" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/mx%281%29-qOPWE9ASiuYsbjaHC6U0qP0N6NcIqn.png" alt="Mexico" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">Mexico</div>
                 </div>
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/ae%281%29-7cDmXIkj1OaED46wqKDtR7DWJKHYtY.png" alt="UAE" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/ae%281%29-DNQ0oy2Fmwr98kzJvl0egBV2Mb6APv.png" alt="UAE" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">UAE</div>
                 </div>
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/in%281%29-nFeN9hgESrUl8Oh9UGZLMTAfypqEr8.png" alt="India" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/in%281%29-tixQKFavaeVZDH98pJDBshhfRQaru4.png" alt="India" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">India</div>
                 </div>
                 
                 <!-- Duplicate set for seamless loop -->
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/us%281%29-bdDrzKpDeJYx3srn6mmgdxHlQ9evLS.png" alt="USA" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/us%281%29-dHgDqTibn6P78bcxNvy5KSPa8LbxUj.png" alt="USA" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">USA</div>
                 </div>
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/cn%281%29-DcQ2jHNR4tGfrDNz6cmsbZTxFgRvnf.png" alt="China" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/cn%281%29-Lw5NF5i65UrFpFV26znRjgyIq29dfv.png" alt="China" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">China</div>
                 </div>
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/de%281%29-oFspEwZCLTHcAkqIy2mOZebxqBlnaj.png" alt="Germany" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/de%281%29-wI3FMGznhdReXTN0NPrMWA3q5JV2GX.png" alt="Germany" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">Germany</div>
                 </div>
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/jp%281%29-dKQ2t0X7sz8XVK9EdapUN8oNRF8d2e.png" alt="Japan" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/jp%281%29-1ulNTq2Axz7H0YUWXCHEqnkV0QX2dS.png" alt="Japan" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">Japan</div>
                 </div>
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/gb%281%29-KtsisIhQhfcsiKb66eTVs5HPd68sgn.png" alt="UK" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/gb%281%29-03v0yQjqvHl0hzCq7uIBAc0B7xtjJG.png" alt="UK" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">UK</div>
                 </div>
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/ca%281%29-RbRvJ9ZmkaFNUIimpuT4poZjtJ2hji.png" alt="Canada" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/ca%281%29-F2Va2Ipuvb9aRxSSo5yDWwKaczwQxb.png" alt="Canada" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">Canada</div>
                 </div>
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/au%281%29-gxf7erEVfAq7evfmtKOZpodQSm4iso.png" alt="Australia" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/au%281%29-ZhKlBZ4w8vE5YnJmKbOXQNVzwQ3Dop.png" alt="Australia" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">Australia</div>
                 </div>
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/fr%281%29-2DYFrC0cu7ac5wn7fU5ajwZ4BFkARC.png" alt="France" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/fr%281%29-ngF03DCG1xPAJLIoAcfsTGX8iUyncE.png" alt="France" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">France</div>
                 </div>
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/br%281%29-fHDhwGFuHgXd5dInwhuhZxONh5rRVp.png" alt="Brazil" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/br%281%29-KJbSStu9T5vtt65tQ9r7ZZLGiLfLqB.png" alt="Brazil" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">Brazil</div>
                 </div>
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/mx%281%29-Ww2bgFQcXjAqmU6NDXy2xhoRTikjfv.png" alt="Mexico" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/mx%281%29-qOPWE9ASiuYsbjaHC6U0qP0N6NcIqn.png" alt="Mexico" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">Mexico</div>
                 </div>
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/ae%281%29-7cDmXIkj1OaED46wqKDtR7DWJKHYtY.png" alt="UAE" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/ae%281%29-DNQ0oy2Fmwr98kzJvl0egBV2Mb6APv.png" alt="UAE" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">UAE</div>
                 </div>
                 <div style="flex-shrink: 0; text-align: center; transition: transform 0.3s ease;">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/in%281%29-nFeN9hgESrUl8Oh9UGZLMTAfypqEr8.png" alt="India" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/in%281%29-tixQKFavaeVZDH98pJDBshhfRQaru4.png" alt="India" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
                     <div style="font-weight: 600; font-size: 1rem;">India</div>
                 </div>
             </div>
@@ -594,22 +638,25 @@
                     <p style="font-size: 1.3rem; color: #64748b; margin-bottom: 40px; line-height: 1.8;">From luxury vehicles to commercial fleets, we provide comprehensive automotive trading solutions with global reach and local expertise.</p>
                     
                     <ul style="list-style: none; margin-bottom: 40px; padding: 0;">
-                        <li style="display: flex; align-items: center; margin-bottom: 20px; font-size: 1.1rem; color: #475569;">
-                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/190411%281%29-dd0Kg12GmbkmjyT8TCJRvxxvHaQFXN.png" alt="Check" style="width: 24px; height: 24px; margin-right: 15px; filter: hue-rotate(220deg);">
-                            Luxury & Commercial Vehicle Trading
-                        </li>
-                        <li style="display: flex; align-items: center; margin-bottom: 20px; font-size: 1.1rem; color: #475569;">
-                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/190411%281%29-dd0Kg12GmbkmjyT8TCJRvxxvHaQFXN.png" alt="Check" style="width: 24px; height: 24px; margin-right: 15px; filter: hue-rotate(220deg);">
+                        <!-- Replaced broken Flaticon with Font Awesome icons -->
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <i class="fas fa-car animated-icon pulse-icon" style="font-size: 20px; margin-right: 10px; color: white;"></i>
+                            Premium Vehicles
+                        </div>
+
+                        <!-- Replaced broken Flaticon with Font Awesome icons -->
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <i class="fas fa-truck animated-icon bounce-icon" style="font-size: 20px; margin-right: 10px; color: white;"></i>
                             Fleet Management Solutions
-                        </li>
-                        <li style="display: flex; align-items: center; margin-bottom: 20px; font-size: 1.1rem; color: #475569;">
-                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/190411%281%29-dd0Kg12GmbkmjyT8TCJRvxxvHaQFXN.png" alt="Check" style="width: 24px; height: 24px; margin-right: 15px; filter: hue-rotate(220deg);">
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <i class="fas fa-cog animated-icon rotate-icon" style="font-size: 20px; margin-right: 10px; color: white;"></i>
                             Automotive Parts & Accessories
-                        </li>
-                        <li style="display: flex; align-items: center; margin-bottom: 20px; font-size: 1.1rem; color: #475569;">
-                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/190411%281%29-dd0Kg12GmbkmjyT8TCJRvxxvHaQFXN.png" alt="Check" style="width: 24px; height: 24px; margin-right: 15px; filter: hue-rotate(220deg);">
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <i class="fas fa-shipping-fast animated-icon pulse-icon" style="font-size: 20px; margin-right: 10px; color: white;"></i>
                             International Shipping & Documentation
-                        </li>
+                        </div>
                     </ul>
                     
                     <a href="services.html" style="display: inline-block; background: #1e3a8a; color: white; padding: 18px 40px; text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(30, 58, 138, 0.2);">View Automotive Services</a>
@@ -637,8 +684,9 @@
                 <div style="flex: 1; animation: slideInLeft 1s ease-out; opacity: 0; animation-fill-mode: forwards;">
                     <div style="position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
                         <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Premium Spices" style="width: 100%; height: 500px; object-fit: cover; transition: transform 0.3s ease;">
+                        <!-- Replaced broken Flaticon with Font Awesome icons -->
                         <div style="position: absolute; bottom: 20px; left: 20px; background: rgba(30, 58, 138, 0.9); color: white; padding: 15px 25px; border-radius: 50px; font-weight: 600;">
-                            <img src="https://cdn-icons-png.flaticon.com/20/2515/2515183.png" alt="Spices" style="width: 20px; height: 20px; margin-right: 10px; filter: brightness(0) invert(1); vertical-align: middle;">
+                            <i class="fas fa-seedling animated-icon bounce-icon" style="font-size: 20px; margin-right: 10px; filter: brightness(0) invert(1); vertical-align: middle;"></i>
                             Premium Quality
                         </div>
                     </div>
@@ -651,22 +699,26 @@
                     
                     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-bottom: 40px;">
                         <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                            <img src="https://cdn-icons-png.flaticon.com/30/2909/2909837.png" alt="Spices" style="width: 30px; height: 30px; margin-bottom: 15px; filter: hue-rotate(220deg);">
+                            <!-- Replaced broken Flaticon with Font Awesome icons -->
+                            <i class="fas fa-pepper-hot animated-icon pulse-icon" style="font-size: 30px; margin-bottom: 15px; color: #1e3a8a;"></i>
                             <h4 style="font-size: 1.2rem; font-weight: 600; color: #1e3a8a; margin-bottom: 10px;">Exotic Spices</h4>
                             <p style="color: #64748b; font-size: 0.95rem;">Cardamom, Saffron, Vanilla, Black Pepper</p>
                         </div>
                         <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                            <img src="https://cdn-icons-png.flaticon.com/30/2515/2515183.png" alt="Grains" style="width: 30px; height: 30px; margin-bottom: 15px; filter: hue-rotate(220deg);">
+                            <!-- Replaced broken Flaticon with Font Awesome icons -->
+                            <i class="fas fa-wheat-awn animated-icon bounce-icon" style="font-size: 30px; margin-bottom: 15px; color: #1e3a8a;"></i>
                             <h4 style="font-size: 1.2rem; font-weight: 600; color: #1e3a8a; margin-bottom: 10px;">Organic Grains</h4>
                             <p style="color: #64748b; font-size: 0.95rem;">Quinoa, Basmati Rice, Wheat, Barley</p>
                         </div>
                         <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                            <img src="https://cdn-icons-png.flaticon.com/30/1625/1625048.png" alt="Nuts" style="width: 30px; height: 30px; margin-bottom: 15px; filter: hue-rotate(220deg);">
+                            <!-- Replaced broken Flaticon with Font Awesome icons -->
+                            <i class="fas fa-seedling animated-icon rotate-icon" style="font-size: 30px; margin-bottom: 15px; color: #1e3a8a;"></i>
                             <h4 style="font-size: 1.2rem; font-weight: 600; color: #1e3a8a; margin-bottom: 10px;">Premium Nuts</h4>
                             <p style="color: #64748b; font-size: 0.95rem;">Almonds, Cashews, Pistachios, Walnuts</p>
                         </div>
                         <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                            <img src="https://cdn-icons-png.flaticon.com/30/2909/2909715.png" alt="Tea" style="width: 30px; height: 30px; margin-bottom: 15px; filter: hue-rotate(220deg);">
+                            <!-- Replaced broken Flaticon with Font Awesome icons -->
+                            <i class="fas fa-mug-hot animated-icon pulse-icon" style="font-size: 30px; margin-bottom: 15px; color: #1e3a8a;"></i>
                             <h4 style="font-size: 1.2rem; font-weight: 600; color: #1e3a8a; margin-bottom: 10px;">Specialty Teas</h4>
                             <p style="color: #64748b; font-size: 0.95rem;">Earl Grey, Darjeeling, Green Tea, Oolong</p>
                         </div>
@@ -689,28 +741,32 @@
                     
                     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; margin-bottom: 40px;">
                         <div style="display: flex; align-items: center; padding: 20px; background: #f8fafc; border-radius: 12px;">
-                            <img src="https://cdn-icons-png.flaticon.com/40/3004/3004458.png" alt="Metal Scrap" style="width: 40px; height: 40px; margin-right: 15px; filter: hue-rotate(220deg);">
+                            <!-- Replaced broken Flaticon with Font Awesome icons -->
+                            <i class="fas fa-industry animated-icon bounce-icon" style="font-size: 40px; margin-right: 15px; color: #1e3a8a;"></i>
                             <div>
                                 <h4 style="font-size: 1.1rem; font-weight: 600; color: #1e3a8a; margin-bottom: 5px;">Metal Scrap</h4>
                                 <p style="color: #64748b; font-size: 0.9rem; margin: 0;">Steel, Aluminum, Copper, Brass</p>
                             </div>
                         </div>
                         <div style="display: flex; align-items: center; padding: 20px; background: #f8fafc; border-radius: 12px;">
-                            <img src="https://cdn-icons-png.flaticon.com/40/2913/2913465.png" alt="Electronic Waste" style="width: 40px; height: 40px; margin-right: 15px; filter: hue-rotate(220deg);">
+                            <!-- Replaced broken Flaticon with Font Awesome icons -->
+                            <i class="fas fa-microchip animated-icon pulse-icon" style="font-size: 40px; margin-right: 15px; color: #1e3a8a;"></i>
                             <div>
                                 <h4 style="font-size: 1.1rem; font-weight: 600; color: #1e3a8a; margin-bottom: 5px;">E-Waste</h4>
                                 <p style="color: #64748b; font-size: 0.9rem; margin: 0;">Electronics, Batteries, Components</p>
                             </div>
                         </div>
                         <div style="display: flex; align-items: center; padding: 20px; background: #f8fafc; border-radius: 12px;">
-                            <img src="https://cdn-icons-png.flaticon.com/40/1998/1998342.png" alt="Industrial Waste" style="width: 40px; height: 40px; margin-right: 15px; filter: hue-rotate(220deg);">
+                            <!-- Replaced broken Flaticon with Font Awesome icons -->
+                            <i class="fas fa-cogs animated-icon rotate-icon" style="font-size: 40px; margin-right: 15px; color: #1e3a8a;"></i>
                             <div>
                                 <h4 style="font-size: 1.1rem; font-weight: 600; color: #1e3a8a; margin-bottom: 5px;">Industrial Waste</h4>
                                 <p style="color: #64748b; font-size: 0.9rem; margin: 0;">Manufacturing Byproducts</p>
                             </div>
                         </div>
                         <div style="display: flex; align-items: center; padding: 20px; background: #f8fafc; border-radius: 12px;">
-                            <img src="https://cdn-icons-png.flaticon.com/40/2913/2913425.png" alt="Recycling" style="width: 40px; height: 40px; margin-right: 15px; filter: hue-rotate(220deg);">
+                            <!-- Replaced broken Flaticon with Font Awesome icons -->
+                            <i class="fas fa-recycle animated-icon bounce-icon" style="font-size: 40px; margin-right: 15px; color: #1e3a8a;"></i>
                             <div>
                                 <h4 style="font-size: 1.1rem; font-weight: 600; color: #1e3a8a; margin-bottom: 5px;">Recycling Services</h4>
                                 <p style="color: #64748b; font-size: 0.9rem; margin: 0;">Processing & Certification</p>
@@ -725,8 +781,9 @@
                 <div style="flex: 1; animation: slideInRight 1s ease-out 0.3s; opacity: 0; animation-fill-mode: forwards;">
                     <div style="position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
                         <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Scrap Materials" style="width: 100%; height: 500px; object-fit: cover; transition: transform 0.3s ease;">
+                        <!-- Replaced broken Flaticon with Font Awesome icons -->
                         <div style="position: absolute; top: 20px; left: 20px; background: rgba(34, 197, 94, 0.9); color: white; padding: 15px 25px; border-radius: 50px; font-weight: 600;">
-                            <img src="https://cdn-icons-png.flaticon.com/20/2913/2913425.png" alt="Eco" style="width: 20px; height: 20px; margin-right: 10px; filter: brightness(0) invert(1); vertical-align: middle;">
+                            <i class="fas fa-leaf animated-icon pulse-icon" style="font-size: 20px; margin-right: 10px; filter: brightness(0) invert(1); vertical-align: middle;"></i>
                             Eco-Friendly
                         </div>
                     </div>
@@ -743,8 +800,9 @@
                 <div style="flex: 1; animation: slideInLeft 1s ease-out; opacity: 0; animation-fill-mode: forwards;">
                     <div style="position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
                         <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Heavy Machinery" style="width: 100%; height: 500px; object-fit: cover; transition: transform 0.3s ease;">
+                        <!-- Replaced broken Flaticon with Font Awesome icons -->
                         <div style="position: absolute; bottom: 20px; right: 20px; background: rgba(30, 58, 138, 0.9); color: white; padding: 15px 25px; border-radius: 50px; font-weight: 600;">
-                            <img src="https://cdn-icons-png.flaticon.com/20/2972/2972531.png" alt="Machinery" style="width: 20px; height: 20px; margin-right: 10px; filter: brightness(0) invert(1); vertical-align: middle;">
+                            <i class="fas fa-tools animated-icon bounce-icon" style="font-size: 20px; margin-right: 10px; filter: brightness(0) invert(1); vertical-align: middle;"></i>
                             Industrial Grade
                         </div>
                     </div>
@@ -759,7 +817,8 @@
         
         <!-- Construction Equipment -->
         <div style="display: flex; align-items: center; padding: 25px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png" alt="Construction Equipment" style="width: 50px; height: 50px; margin-right: 20px;">
+            <!-- Replaced broken Flaticon with Font Awesome icons -->
+            <i class="fas fa-hammer animated-icon pulse-icon" style="font-size: 50px; margin-right: 20px; color: #1e3a8a;"></i>
             <div>
                 <h4 style="font-size: 1.3rem; font-weight: 600; color: #1e3a8a; margin-bottom: 8px;">Construction Equipment</h4>
                 <p style="color: #64748b; margin: 0;">Excavators, Bulldozers, Cranes, Loaders, Compactors</p>
@@ -768,7 +827,8 @@
 
         <!-- Manufacturing Equipment -->
         <div style="display: flex; align-items: center; padding: 25px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-            <img src="https://cdn-icons-png.flaticon.com/512/2422/2422209.png" alt="Manufacturing Equipment" style="width: 50px; height: 50px; margin-right: 20px;">
+            <!-- Replaced broken Flaticon with Font Awesome icons -->
+            <i class="fas fa-industry animated-icon bounce-icon" style="font-size: 50px; margin-right: 20px; color: #1e3a8a;"></i>
             <div>
                 <h4 style="font-size: 1.3rem; font-weight: 600; color: #1e3a8a; margin-bottom: 8px;">Manufacturing Equipment</h4>
                 <p style="color: #64748b; margin: 0;">CNC Machines, Industrial Robots, Assembly Lines</p>
@@ -777,7 +837,8 @@
 
         <!-- Mining & Extraction -->
         <div style="display: flex; align-items: center; padding: 25px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-            <img src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png" alt="Mining & Extraction" style="width: 50px; height: 50px; margin-right: 20px;">
+            <!-- Replaced broken Flaticon with Font Awesome icons -->
+            <i class="fas fa-mining" style="font-size: 50px; margin-right: 20px; color: #1e3a8a;"></i>
             <div>
                 <h4 style="font-size: 1.3rem; font-weight: 600; color: #1e3a8a; margin-bottom: 8px;">Mining & Extraction</h4>
                 <p style="color: #64748b; margin: 0;">Drilling Rigs, Conveyor Systems, Processing Equipment</p>
@@ -803,22 +864,26 @@
                     
                     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-bottom: 40px;">
                         <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-                            <img src="https://cdn-icons-png.flaticon.com/40/411/411763.png" alt="Global Network" style="width: 40px; height: 40px; margin-bottom: 20px; filter: brightness(0) invert(1);">
+                            <!-- Replaced broken Flaticon with Font Awesome icons -->
+                            <i class="fas fa-globe animated-icon rotate-icon" style="font-size: 40px; margin-bottom: 20px; color: white;"></i>
                             <h4 style="font-size: 1.4rem; font-weight: 600; color: white; margin-bottom: 15px;">Global Network</h4>
                             <p style="color: rgba(255,255,255,0.8); font-size: 1rem; line-height: 1.6;">45+ countries connected through our extensive trading network</p>
                         </div>
                         <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-                            <img src="https://cdn-icons-png.flaticon.com/40/1055/1055645.png" alt="Fast Delivery" style="width: 40px; height: 40px; margin-bottom: 20px; filter: brightness(0) invert(1);">
+                            <!-- Replaced broken Flaticon with Font Awesome icons -->
+                            <i class="fas fa-shipping-fast animated-icon bounce-icon" style="font-size: 40px; margin-bottom: 20px; color: white;"></i>
                             <h4 style="font-size: 1.4rem; font-weight: 600; color: white; margin-bottom: 15px;">Express Logistics</h4>
                             <p style="color: rgba(255,255,255,0.8); font-size: 1rem; line-height: 1.6;">Fast and reliable shipping with real-time tracking</p>
                         </div>
                         <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-                            <img src="https://cdn-icons-png.flaticon.com/40/3588/3588435.png" alt="Quality Control" style="width: 40px; height: 40px; margin-bottom: 20px; filter: brightness(0) invert(1);">
+                            <!-- Replaced broken Flaticon with Font Awesome icons -->
+                            <i class="fas fa-award animated-icon pulse-icon" style="font-size: 40px; margin-bottom: 20px; color: white;"></i>
                             <h4 style="font-size: 1.4rem; font-weight: 600; color: white; margin-bottom: 15px;">Quality Assurance</h4>
                             <p style="color: rgba(255,255,255,0.8); font-size: 1rem; line-height: 1.6;">Rigorous quality control at every stage of trading</p>
                         </div>
                         <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-                            <img src="https://cdn-icons-png.flaticon.com/40/684/684908.png" alt="24/7 Support" style="width: 40px; height: 40px; margin-bottom: 20px; filter: brightness(0) invert(1);">
+                            <!-- Replaced broken Flaticon with Font Awesome icons -->
+                            <i class="fas fa-headset animated-icon bounce-icon" style="font-size: 40px; margin-bottom: 20px; color: white;"></i>
                             <h4 style="font-size: 1.4rem; font-weight: 600; color: white; margin-bottom: 15px;">24/7 Support</h4>
                             <p style="color: rgba(255,255,255,0.8); font-size: 1rem; line-height: 1.6;">Round-the-clock customer service and technical support</p>
                         </div>
@@ -831,8 +896,9 @@
                 <div style="flex: 1; animation: slideInRight 1s ease-out 0.3s; opacity: 0; animation-fill-mode: forwards;">
                     <div style="position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
                         <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Global Logistics" style="width: 100%; height: 500px; object-fit: cover; transition: transform 0.3s ease;">
+                        <!-- Replaced broken Flaticon with Font Awesome icons -->
                         <div style="position: absolute; top: 20px; left: 20px; background: rgba(255,255,255,0.9); color: #1e3a8a; padding: 15px 25px; border-radius: 50px; font-weight: 600;">
-                            <img src="https://cdn-icons-png.flaticon.com/20/684/684908.png" alt="Global" style="width: 20px; height: 20px; margin-right: 10px; filter: hue-rotate(220deg); vertical-align: middle;">
+                            <i class="fas fa-globe-americas animated-icon rotate-icon" style="font-size: 20px; margin-right: 10px; filter: hue-rotate(220deg); vertical-align: middle;"></i>
                             Worldwide Reach
                         </div>
                     </div>
@@ -1067,7 +1133,8 @@
                     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 200px; background: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover; border-radius: 20px 20px 0 0;"></div>
                     <div style="position: relative; z-index: 2; margin-top: 120px;">
                         <div style="width: 80px; height: 80px; margin: 0 auto 25px; background: #1e3a8a; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <img src="https://cdn-icons-png.flaticon.com/50/3588/3588435.png" alt="Construction" style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                            <!-- Replaced broken Flaticon with Font Awesome icons -->
+                            <i class="fas fa-hammer animated-icon pulse-icon" style="font-size: 40px; color: white;"></i>
                         </div>
                         <h4 style="font-size: 1.5rem; font-weight: 600; color: #1e3a8a; margin-bottom: 15px;">Construction Materials</h4>
                         <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">Premium building materials, steel, cement, and construction supplies from certified global manufacturers.</p>
@@ -1080,7 +1147,8 @@
                     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 200px; background: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover; border-radius: 20px 20px 0 0;"></div>
                     <div style="position: relative; z-index: 2; margin-top: 120px;">
                         <div style="width: 80px; height: 80px; margin: 0 auto 25px; background: #1e3a8a; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <img src="https://cdn-icons-png.flaticon.com/50/1055/1055645.png" alt="Automotive" style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                            <!-- Replaced broken Flaticon with Font Awesome icons -->
+                            <i class="fas fa-car animated-icon bounce-icon" style="font-size: 40px; color: white;"></i>
                         </div>
                         <h4 style="font-size: 1.5rem; font-weight: 600; color: #1e3a8a; margin-bottom: 15px;">Automotive Trading</h4>
                         <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">Vehicle trading, fleet solutions, and automotive parts sourcing with comprehensive warranty coverage.</p>
@@ -1093,7 +1161,8 @@
                     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 200px; background: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover; border-radius: 20px 20px 0 0;"></div>
                     <div style="position: relative; z-index: 2; margin-top: 120px;">
                         <div style="width: 80px; height: 80px; margin: 0 auto 25px; background: #1e3a8a; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <img src="https://cdn-icons-png.flaticon.com/50/2972/2972531.png" alt="Machinery" style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                            <!-- Replaced broken Flaticon with Font Awesome icons -->
+                            <i class="fas fa-cogs animated-icon rotate-icon" style="font-size: 40px; color: white;"></i>
                         </div>
                         <h4 style="font-size: 1.5rem; font-weight: 600; color: #1e3a8a; margin-bottom: 15px;">Heavy Equipment</h4>
                         <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">Industrial machinery, excavators, cranes, and specialized equipment with technical support.</p>
@@ -1106,7 +1175,8 @@
                     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 200px; background: url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover; border-radius: 20px 20px 0 0;"></div>
                     <div style="position: relative; z-index: 2; margin-top: 120px;">
                         <div style="width: 80px; height: 80px; margin: 0 auto 25px; background: #1e3a8a; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <img src="https://cdn-icons-png.flaticon.com/50/2515/2515183.png" alt="Agriculture" style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                            <!-- Replaced broken Flaticon with Font Awesome icons -->
+                            <i class="fas fa-tractor animated-icon pulse-icon" style="font-size: 40px; color: white;"></i>
                         </div>
                         <h4 style="font-size: 1.5rem; font-weight: 600; color: #1e3a8a; margin-bottom: 15px;">Agricultural Commodities</h4>
                         <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">Premium spices, food products, and agricultural commodities with quality certifications.</p>
@@ -1119,7 +1189,8 @@
                     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 200px; background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover; border-radius: 20px 20px 0 0;"></div>
                     <div style="position: relative; z-index: 2; margin-top: 120px;">
                         <div style="width: 80px; height: 80px; margin: 0 auto 25px; background: #1e3a8a; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <img src="https://cdn-icons-png.flaticon.com/50/3004/3004458.png" alt="Recycling" style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                            <!-- Replaced broken Flaticon with Font Awesome icons -->
+                            <i class="fas fa-recycle animated-icon bounce-icon" style="font-size: 40px; color: white;"></i>
                         </div>
                         <h4 style="font-size: 1.5rem; font-weight: 600; color: #1e3a8a; margin-bottom: 15px;">Scrap Materials</h4>
                         <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">Metal scrap, recycling materials, and waste management solutions with environmental compliance.</p>
@@ -1132,7 +1203,8 @@
                     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 200px; background: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover; border-radius: 20px 20px 0 0;"></div>
                     <div style="position: relative; z-index: 2; margin-top: 120px;">
                         <div style="width: 80px; height: 80px; margin: 0 auto 25px; background: #1e3a8a; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <img src="https://cdn-icons-png.flaticon.com/50/411/411763.png" alt="Logistics" style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                            <!-- Replaced broken Flaticon with Font Awesome icons -->
+                            <i class="fas fa-truck animated-icon rotate-icon" style="font-size: 40px; color: white;"></i>
                         </div>
                         <h4 style="font-size: 1.5rem; font-weight: 600; color: #1e3a8a; margin-bottom: 15px;">Logistics Solutions</h4>
                         <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">End-to-end logistics, freight forwarding, and supply chain management with real-time tracking.</p>
@@ -1206,13 +1278,13 @@
                     <p style="opacity: 0.9; line-height: 1.6; margin-bottom: 20px; color: white;">Leading international trading company specializing in construction materials, vehicles, machinery, and agricultural commodities.</p>
                     <div style="display: flex; gap: 15px;">
                         <a href="#" style="color: white; opacity: 0.8; transition: opacity 0.3s ease;">
-                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/733547%281%29-MCGCEBFYiawab3asVtI5CMHpqVzlxL.png" alt="Facebook" style="width: 24px; height: 24px; filter: brightness(0) invert(1);">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/733547%281%29-M2oX0AUACV7voNWJ7ANxBNFgkQeeBE.png" alt="Facebook" style="width: 24px; height: 24px; filter: brightness(0) invert(1);">
                         </a>
                         <a href="#" style="color: white; opacity: 0.8; transition: opacity 0.3s ease;">
-                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/733579%281%29-yFK7j5rO4wIk3ZtstPuZD4xwqCxSOP.png" alt="Twitter" style="width: 24px; height: 24px; filter: brightness(0) invert(1);">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/733579%281%29-5OhzJQbnQbEdMStKbob3qkNLVupTQ2.png" alt="Twitter" style="width: 24px; height: 24px; filter: brightness(0) invert(1);">
                         </a>
                         <a href="#" style="color: white; opacity: 0.8; transition: opacity 0.3s ease;">
-                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/733561%281%29-9wyqosnq6MCIv92rc9tltMohJDZXrW.png" alt="LinkedIn" style="width: 24px; height: 24px; filter: brightness(0) invert(1);">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/733561%281%29-LYdAL1uPrMg5Uywt6JpVvaCSTRgjz0.png" alt="LinkedIn" style="width: 24px; height: 24px; filter: brightness(0) invert(1);">
                         </a>
                     </div>
                 </div>
@@ -1237,15 +1309,15 @@
                     <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 20px;">Contact Info</h4>
                     <div style="opacity: 0.9;">
                         <p style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/684908%281%29-2S1WFPhrpGUuvFjD6pEY2aIzPBMOny.png" alt="Location" style="filter: brightness(0) invert(1);">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/684908%281%29-M8VqWTWEDx4AsH7dWUiW449yfT9Inq.png" alt="Location" style="filter: brightness(0) invert(1);">
                             Los Angeles, California, USA
                         </p>
                         <p style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/733585%281%29-UoHa7k353rUJf9xnJXhCnSbZDvnrYD.png" alt="Phone" style="filter: brightness(0) invert(1);">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/733585%281%29-FxSlSmV03v32Q1syGxlXkmnEZhAQmc.png" alt="Phone" style="filter: brightness(0) invert(1);">
                             +1-555-TRADE-01
                         </p>
                         <p style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/732200%281%29-6X2BcF3MCrY4ccueNv21y15moRp2Xj.png" alt="Email" style="filter: brightness(0) invert(1);">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/732200%281%29-fwVByAhv7FfYKQ05kIjkYtTcA9faWA.png" alt="Email" style="filter: brightness(0) invert(1);">
                             info@globaltradecalifornia.com
                         </p>
                     </div>
